@@ -7,10 +7,19 @@ git clone https://github.com/USERNAME/portfolio4.git
 cd portfolio4
 git submodule update --init --recursive
 
-# 2️⃣ Add a new submodule (e.g., a new project folder)
+# 2️⃣ Add a new submodule (and include it in the parent)
+# Example: add a new project folder as a submodule
 git submodule add https://github.com/USERNAME/NewProject.git NewProject
+
+# This creates an entry in .gitmodules and links it to your main repo.
+# Now commit both the new folder and the .gitmodules changes:
+git add .gitmodules NewProject
 git commit -m "Add NewProject as submodule"
 git push
+
+# ✅ Tip: When someone else clones the main repo later, they just need:
+# git clone https://github.com/USERNAME/portfolio4.git
+# git submodule update --init --recursive
 
 # 3️⃣ Work on a submodule
 cd Pokedex

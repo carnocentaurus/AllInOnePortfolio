@@ -1,0 +1,36 @@
+[submodule "AgeCalculator"]
+	path = AgeCalculator
+	url = https://github.com/carnocentaurus/AgeCalculator.git
+[submodule "Calculator"]
+	path = Calculator
+	url = https://github.com/carnocentaurus/Calculator.git
+[submodule "ClockAndCalendar"]
+	path = ClockAndCalendar
+	url = https://github.com/carnocentaurus/ClockAndCalendar.git
+[submodule "CountdownTimer"]
+	path = CountdownTimer
+	url = https://github.com/carnocentaurus/CountdownTimer.git
+[submodule "GradeInterpreter"]
+	path = GradeInterpreter
+	url = https://github.com/carnocentaurus/GradeInterpreter.git
+[submodule "ImageViewer"]
+	path = ImageViewer
+	url = https://github.com/carnocentaurus/ImageViewer.git
+[submodule "MultiplicationTable"]
+	path = MultiplicationTable
+	url = https://github.com/carnocentaurus/MultiplicationTable.git
+[submodule "NumberGuessingGame"]
+	path = NumberGuessingGame
+	url = https://github.com/carnocentaurus/NumberGuessingGame.git
+[submodule "RandomJokeGenerator"]
+	path = RandomJokeGenerator
+	url = https://github.com/carnocentaurus/RandomJokeGenerator.git
+[submodule "ResumeCreator"]
+	path = ResumeCreator
+	url = https://github.com/carnocentaurus/ResumeCreator.git
+[submodule "TaskManager"]
+	path = TaskManager
+	url = https://github.com/carnocentaurus/TaskManager.git
+[submodule "WeatherSystem"]
+	path = WeatherSystem
+	url = https://github.com/carnocentaurus/WeatherSystem.git

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<!--May 6, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  
+  <main id="homePage">
+    <img src="ejay.jpg">
+    
+    <p id="name">Eric John Mercolino</p>
+    
+    <div id="pagesDiv">
+      <button onclick="openPage(0)">About</button>
+      <button onclick="openPage(1)">Projects</button>
+      <button onclick="openPage(2)">Contact</button>
+    </div>
+  </main>
+  
+  
+  <div id="aboutPage" style="display: none">
+    <p class="back" onclick="closePage(0)"><<</p>
+    <p class="title">About Me</p>
+    
+    <section id="bioDataDiv">
+      <p class="label">Name</p>
+      <p class="data">Eric John Mercolino</p>
+      <p class="label">Age</p>
+      <p class="data" id="ageDisplay"></p>
+      <p class="label">Birthday</p>
+      <p class="data">06/19/2004</p>
+      <p class="label">Address</p>
+      <p class="data">Bubog, Sibunag, Guimaras</p>
+      <p class="label">Languages</p>
+      <p class="data">Hiligaynon<br>Tagalog<br>English<br>JavaScript</p>
+    </section>
+  </div>
+  
+  
+  <div id="projectsPage" style="display: none">
+    <p class="back" onclick="closePage(1)"><<</p>
+    <p class="title">My Projects</p>
+    
+    <section id="projectsList">
+      <a href="Pokedex/index.html">Pokedex</a>
+      <a href="ResumeCreator/index.html">ResumeCreator</a>
+      <a href="ClockAndCalendar/index.html">ClockAndCalendar</a>
+      <a href="MultiplicationTable/index.html">MultiplicationTable</a>
+      <a href="CountdownTimer/index.html">CountdownTimer</a>
+      <a href="TaskManager/index.html">TaskManager</a>
+      <a href="WeatherSystem/index.html">WeatherSystem</a>
+      <a href="Calculator/index.html">Calculator</a>
+      <a href="GradeInterpreter/index.html">GradeInterpreter</a>
+      <a href="AgeCalculator/index.html">AgeCalculator</a>
+      <a href="RandomJokeGenerator/index.html">RandomJokeGenerator</a>
+      <a href="ImageViewer/index.html">ImageViewer</a>
+      <a href="NumberGuessingGame/index.html">NumberGuessingGame</a>
+    </section>
+  </div>
+  
+  
+  <div id="contactPage" style="display: none">
+    <p class="back" onclick="closePage(2)"><<</p>
+    <p class="title">Contact Me</p>
+    
+    <form action="https://getform.io/f/zbzkkjma" method="post">
+        <input placeholder="Your email" type="email" required>
+
+        <textarea name="message" type="message" placeholder="Your message" rows="8" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+  </div>
+  
+ 
+  <script src="script.js"></script>
+  
+</body>
+
+</html>

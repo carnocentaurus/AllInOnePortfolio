@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<!--Jun 28, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test</title>
+</head>
+
+<body>
+  
+  
+  <main>
+    <p id="title">TASK<br>MANAGER</p>
+    
+    <div id="tabsDiv">
+      <p onclick="handleTabs(0, 1, 'pending')" id="pendingTasksTab">Pending</p>
+      <p onclick="handleTabs(1, 0, 'completed')" id="completedTasksTab">Completed</p>
+    </div>
+    
+    
+    <div id="pendingTasksDiv" onclick="moveTask(event)">
+      <input id="taskInput" placeholder="Enter task">
+      <button onclick="addTask()">+</button>
+      
+      <ol id="pendingTasksDisplay"></ol>
+    </div>
+    
+    
+    <div id="manageTaskDiv" onclick="managePendingTask(event)" style="display: none">
+      <p id="taskNameDisplay"></p>
+      
+      <button>Mark as Complete</button>
+      <button>Edit</button>
+      <button>Delete</button>
+      
+      <button>Go Back</button>
+    </div>
+    
+    
+    <div id="completedTasksDiv" onclick="manageCompletedTasks(event)" style="display: none">
+      <ol id="completedTasksDisplay"></ol>
+    </div>
+  </main>
+  
+  
+  <script src="test.js"></script>
+  
+</body>
+
+</html>

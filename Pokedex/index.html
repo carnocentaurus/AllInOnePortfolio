@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<!--Jan 19, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="Pokedex.css">
+</head>
+
+<body>
+  
+  
+  <main>
+    <p id="title">POKEDEX</p>
+    
+    <div id="tabsDiv">
+      <p onclick="handleTabs(0, 1, 'randomPokemonTab')" id="randomPokemonTab">Random</p>
+      <p onclick="handleTabs(1, 0, 'searchPokemonTab')" id="searchPokemonTab">Search</p>
+    </div>
+    
+    
+    <div id="randomPokemonDiv">
+      <img src="" id="randomPokemonSpriteDisplay">
+      <p id="randomPokemonInfoDisplay"></p>
+      
+      <button onclick="fetchRandomPokemon()">Fetch</button>
+    </div>
+    
+    
+    <div id="searchPokemonDiv">
+      <input id="pokemonNameOrIdInput" placeholder="Name or #" required>
+      <button onclick="fetchPokemonByNameOrId()">Fetch</button>
+      
+      <img src="" id="searchPokemonSpriteDisplay">
+      <p id="searchPokemonInfoDisplay"></p>
+    </div>
+  </main>
+  
+  
+  <script src="Pokedex.js"></script>
+
+</body>
+
+</html>

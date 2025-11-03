@@ -34,3 +34,6 @@
 [submodule "WeatherSystem"]
 	path = WeatherSystem
 	url = https://github.com/carnocentaurus/WeatherSystem.git
+[submodule "Pokedex"]
+	path = Pokedex
+	url = https://github.com/carnocentaurus/Pokedex.git

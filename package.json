@@ -1,7 +1,0 @@
-{
-  "name": "carnocentaurus-portfolio4-static",
-  "version": "1.0.0",
-  "scripts": {
-    "preinstall": "git submodule update --init --recursive"
-  }
-}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<!--Jun 28, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather System</title>
+  <link rel="stylesheet" href="WeatherSystem.css">
+</head>
+
+<body>
+  
+  
+  <main>
+    <p id="title">WEATHER<br>SYSTEM</p>
+    
+    
+    <div id="inputDiv">
+      <input id="cityInput" placeholder="Input city name">
+      <button onclick="fetchWeatherData()">></button>
+    </div>
+    
+    
+    <div id="displayDiv">
+      <img src="" id="weatherIconDisplay">
+      <p id="weatherDescDisplay"></p>
+    
+      <label for="tempDisplay">Temperatures</label>
+      <p id="tempDisplay"></p>
+    
+      <label for="windSpeedDisplay">Wind Speed</label>
+      <p id="windSpeedDisplay"></p>
+      <label for="windDirectionDisplay">Wind Direction</label>
+      <p id="windDirectionDisplay"></p>
+      <label for="peakWindDisplay">Peak Wind</label>
+      <p id="peakWindDisplay"></p>
+    </div>
+  </main>
+
+  
+  <script src="WeatherSystem.js"></script>
+  
+</body>
+
+</html>

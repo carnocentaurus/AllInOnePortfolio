@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins.ttf");
+}
+
+@font-face {
+  font-family: "Bebas";
+  src: url("Bebas.ttf");
+}
+
+@font-face {
+  font-family: "NBAMilwaukeeBucks2015";
+  src: url("NBAMilwaukeeBucks2015.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*center the main container*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #cfcfcf;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 300px;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 2px #333;
+  text-align: center;
+}
+
+main #clockDisplay {
+  font-family: "Bebas";
+  font-size: 2rem;
+  color: #666;
+}
+
+main #dayOfWeekDisplay {
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 2.8em;
+}
+
+main #monthDisplay,
+main #yearDisplay {
+  font-family: "NBAMilwaukeeBucks2015";
+  font-size: 1rem;
+  color: #666;
+  letter-spacing: 2px;
+}
+
+main #dateDisplay {
+  font-family: "NBAMilwaukeeBucks2015";
+  font-size: 9rem;
+  color: #666;
+}
+
+main #holidayDisplay {
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #666;
+  margin-top: 2.8rem;
+}

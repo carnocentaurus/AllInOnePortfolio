@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Righteous";
+  src: url("Righteous.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*center the main container*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #cfcfcf;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 300px;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 2px #333;
+  text-align: center;
+}
+
+main #title {
+  font-family: "Righteous";
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;  
+}
+
+main #inputDiv #cityInput {
+  border: 2px solid #333;
+  height: 1.35rem;
+  width: 9rem;
+  padding: 0 0.3rem;
+  overflow-x: scroll;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+::placeholder {
+  color: #333;
+  font-weight: bold;
+}
+
+main #inputDiv button {
+  color: #f4f4f4;
+  background-color: #333;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  padding: 0.27rem 0.6rem;
+}
+
+button:active, button:hover {
+  opacity: 70%;
+}
+
+main #displayDiv {
+  display: none;
+}
+
+main #displayDiv #weatherIconDisplay {
+  width: 30%;
+}
+
+main #displayDiv #weatherDescDisplay {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+main #displayDiv label {
+  font-family: "Poppins";
+  font-size: 0.6rem;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+main #displayDiv p {
+  font-family: "Righteous";
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.7rem;
+}

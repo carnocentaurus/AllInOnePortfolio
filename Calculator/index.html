@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<!--Jan 2, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="Calculator.css">
+</head>
+
+<body>
+  
+  <main>
+    <input id="display" readonly>
+    
+    <div id="buttonsDiv">
+      <button onclick="appendToDisplay('+')" class="operators">+</button>
+        <button onclick="appendToDisplay('0')" class="numbers">0</button>
+        <button onclick="appendToDisplay('1')" class="numbers">1</button>
+        <button onclick="appendToDisplay('2')" class="numbers">2</button>
+        <button onclick="appendToDisplay('-')" class="operators">-</button>
+        <button onclick="appendToDisplay('3')" class="numbers">3</button>
+        <button onclick="appendToDisplay('4')" class="numbers">4</button>
+        <button onclick="appendToDisplay('5')" class="numbers">5</button>
+        <button onclick="appendToDisplay('*')" class="operators">x</button>
+        <button onclick="appendToDisplay('6')" class="numbers">6</button>
+        <button onclick="appendToDisplay('7')" class="numbers">7</button>
+        <button onclick="appendToDisplay('8')" class="numbers">8</button>
+        <button onclick="appendToDisplay('/')" class="operators">÷</button>
+        <button onclick="appendToDisplay('9')" class="numbers">9</button>
+        <button onclick="clearDisplay()" class="removeButtons">AC</button>
+        <button onclick="pullFromDisplay()" class="removeButtons">&#x232B</button>
+        <button onclick="appendToDisplay('(')" class="parentheses">(</button>
+        <button onclick="appendToDisplay(')')" class="parentheses">)</button>
+        <button onclick="appendToDisplay('.')" id="decimal">.</button>
+        <button onclick="calculate()" id="equals">=</button>
+    </div>
+  </main>
+  
+  <script src="Calculator.js"></script>
+  
+</body>
+
+</html>

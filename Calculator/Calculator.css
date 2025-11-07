@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Righteous";
+  src: url("Righteous.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*center the main container*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #cfcfcf;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 300px;
+  border-radius: 2rem;
+  padding: 2.8rem 1.5rem;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 2px #333;
+  text-align: center;
+}
+
+main #display {
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #cfcfcf;
+  border: 2px solid #333;
+  height: 3.8rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  letter-spacing: 0.3rem;
+}
+
+main #buttonsDiv {
+  display: grid;
+  /*5 buttons per row*/
+  grid-template-rows: 3rem 3rem 3rem 3rem 3rem;
+  /*4 buttons per column*/
+  grid-template-columns: 3rem 3rem 3rem 3rem;
+  justify-content: space-between;
+  grid-row-gap: 1.2rem;
+}
+
+main #buttonsDiv button {
+  font-family: "Poppins";
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 50%;
+  border: none;
+  color: #f4f4f4;
+}
+
+main #buttonsDiv .operators,
+main #buttonsDiv .removeButtons,
+main #buttonsDiv #equals {
+background-color: #333;
+}
+
+main #buttonsDiv .numbers,
+main #buttonsDiv #decimal {
+background-color: #666;
+}
+
+main #buttonsDiv .parentheses {
+  background-color: #808080;
+}

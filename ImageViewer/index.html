@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<!--Jul 22, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Viewer</title>
+  <link rel="stylesheet" href="ImageViewer.css">
+</head>
+
+<body>
+  
+  
+  <main>
+    <p id="title">IMAGE<br>VIEWER</p>
+    
+    <div id="tabsDiv">
+      <p onclick="handleTabs(0, 1, 'random')" id="randomTab">Random</p>
+      <p onclick="handleTabs(1, 0, 'search')" id="searchTab">Search</p>
+    </div>
+    
+    
+    <div id="randomDiv">
+      <p id="randomIdDisplay"></p>
+      
+      <img id="randomImgDisplay" src="" alt="Image">
+      
+      
+      <div id="randomToolsDiv" style="display: none">
+        <label for="randomGrayScaleCheckbox">Gray-Scale</label><br>
+        <input id="randomGrayScaleCheckbox" type="checkbox" class="tools"><br>
+        
+        <label for="randomShapeSelect">Shape</label><br>
+        <select id="randomShapeSelect" class="tools">
+          <option value="200">Square</option>
+          <option value="300">Rectangle</option>
+        </select><br>
+      
+        <label id="randomBlurValueDisplay"></label><br>
+        <input id="randomBlurRange" onchange="displayRandomBlurValue(event)" class="tools" type="range" value="0" min="0" max="5"><br>
+      </div>
+      
+      
+      <button onclick="fetchRandomImg()">Fetch</button>
+    </div>
+    
+    
+    <div id="searchDiv" style="display: none">
+      <input id="imgIdInput" type="number" placeholder="Enter Image ID">
+      <button onclick="fetchImgById()">Fetch</button><br>
+      
+      <img id="searchImgDisplay" src="" alt="Image">
+      
+      <div id="searchToolsDiv" style="display: none">
+        <label for="searchGrayScaleCheckbox">Gray-Scale</label><br>
+        <input id="searchGrayScaleCheckbox" type="checkbox" class="tools"><br>
+      
+        <label for="searchShapeSelect">Shape</label><br>
+        <select id="searchShapeSelect" class="tools">
+          <option value="200">Square</option>
+          <option value="300">Rectangle</option>
+        </select><br>
+      
+        <label id="searchBlurValueDisplay"></label><br>
+        <input id="searchBlurRange" onchange="displaySearchBlurValue(event)" class="tools" type="range" value="0" min="0" max="5"><br>
+      </div>
+      
+      
+    </div>
+  </main>
+  
+  
+  <script src="ImageViewer.js"></script>
+  
+</body>
+
+</html>

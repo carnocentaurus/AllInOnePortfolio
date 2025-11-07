@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Righteous";
+  src: url("Righteous.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins.ttf");
+}
+
+@font-face {
+  font-family: "Bebas";
+  src: url("Bebas.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*center the main container*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #cfcfcf;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 300px;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 2px #333;
+  text-align: center;
+}
+
+main #title {
+  font-family: "Righteous";
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+main #gradesInputDiv section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+main #gradesInputDiv section label {
+  font-family: "Bebas";
+  font-size: 1.5rem;
+  color: #333;
+}
+
+main #gradesInputDiv section input {
+  font-family: "Bebas";
+  font-size: 1.5rem;
+  width: 4rem;
+  text-align: center;
+  color: #333;
+  background-color: transparent;
+  border: 1.5px solid #333;
+  padding: 0.2rem 0 0.2rem 0.6rem;
+  margin-top: 0.2rem;
+}
+
+main #gradesInputDiv button {
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  color: #f4f4f4;
+  background-color: #333;
+  margin-top: 2rem;
+  padding: 0.2rem 0.4rem;
+  border: none;
+  border-radius: 0.1rem;
+}
+
+main #gradesDisplayDiv {
+  display: none;
+}
+
+main #gradesDisplayDiv #interpretationDisplay {
+  font-family: "Poppins";
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+main #gradesDisplayDiv .gradesDisplay {
+  font-family: "Bebas";
+  font-size: 2.5rem;
+  color: #333;
+  filter: drop-shadow(2px 2px 0 #a3a3a3);
+  margin-top: 1rem;
+}
+
+main #gradesDisplayDiv #letterGradeDisplay {
+  font-family: "Bebas";
+  font-size: 2.5rem;
+  color: #a3a3a3;
+  filter: drop-shadow(2px 2px 0 #333);
+  margin-top: 1rem;
+}
+
+main #gradesDisplayDiv .gradeLabels {
+  font-family: "Poppins";
+  font-size: 0.7rem;
+  color: #666;
+}
+
+main #gradesDisplayDiv #resetGradesText {
+  font-family: "Poppins";
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: #a3a3a3;
+  margin-top: 2.5rem;
+}
+
+/*classList style for 69 grade*/
+main #gradesDisplayDiv .gradesDisplay.niceGrade,
+main #gradesDisplayDiv #letterGradeDisplay.niceGrade {
+  color: gold;
+  filter: drop-shadow(2px 2px 0 #333);
+}

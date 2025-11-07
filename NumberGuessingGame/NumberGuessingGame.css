@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Righteous";
+  src: url("Righteous.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*center the main container*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #cfcfcf;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 300px;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 2px #333;
+  text-align: center;
+}
+
+main #title {
+  font-family: "Righteous";
+  text-align: center;
+  color: #666;
+  margin-bottom: 0.6rem;
+}
+
+main label {
+  font-family: "Poppins";
+  font-size: 0.7rem;
+  color: #666;
+}
+
+main #resultDisplay {
+  font-family: "Poppins";
+  font-size: 1rem;
+  color: #333;
+  margin: 1.5rem 0;
+}
+
+main #guessInput {
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  width: 8.5rem;
+  text-align: center;
+  color: #333;
+  background-color: transparent;
+  border: 1.5px solid #333;
+  margin: 0 auto 0.5rem;
+  padding: 0.2rem 0;
+}
+
+main #submitGuessBtn,
+main #playAgainBtn {
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  color: #f4f4f4;
+  background-color: #333;
+  border: none;
+  border-radius: 0.1rem;
+  margin: 0 auto;
+  padding: 0.2rem 0;
+  width: 8.7rem;
+}
+
+main button:hover {
+  opacity: 80%;
+}

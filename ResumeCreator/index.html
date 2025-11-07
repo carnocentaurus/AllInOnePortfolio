@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<!--Feb 8, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume Creator</title>
+  <link rel="stylesheet" href="ResumeCreator.css">
+</head>
+
+<body>
+  
+  <main>
+    <p id="title">RESUME<br>CREATOR</p>
+    
+    <div id="inputsDiv">
+      <img id="imgDisplay" src="" alt="Chosen Image">
+      <label for="imgInput">Upload Image</label><br>
+      <input id="imgInput" type="file" accept="image/jpg, image/jpeg, image/png" required>
+      
+      <input id="nameInput" placeholder="Name" required>
+      <input id="ageInput" type="number" placeholder="Age" required>
+      <input id="addressInput" placeholder="Address" required>
+      <input id="schoolInput" placeholder="School" required>
+      <input id="skillsInput" placeholder="Skills" required>
+      <input id="languagesInput" placeholder="Languages" required>
+      <input id="contactNumInput" type="tel" placeholder="Contact Number" required>
+      <input id="emailInput" type="email" placeholder="Email" required><br>
+      
+      <button onclick="handleResume()">View Resume</button>
+    </div>
+    
+    
+    <div id="displaysDiv">
+      <img id="chosenImgDisplay" src="" alt="Your Image">
+      <p id="nameDisplay"></p>
+      
+      <label for="ageDisplay">Age</label>
+      <p id="ageDisplay"></p>
+      
+      <label for="addressDisplay">Address</label>
+      <p id="addressDisplay"></p>
+      
+      <label for="schoolDisplay">School</label>
+      <p id="schoolDisplay"></p>
+      
+      <label for="skillsDisplay">Skills</label>
+      <p id="skillsDisplay"></p>
+      
+      <label for="languagesDisplay">Languages</label>
+      <p id="languagesDisplay"></p>
+      
+      <label for="contactNumDisplay">Contact Number</label>
+      <p id="contactNumDisplay"></p>
+      
+      <label for="emailDisplay">Email</label>
+      <p id="emailDisplay"></p>
+      
+      <p id="newResumeText">New Resume</p>
+    </div>
+  </main>
+  
+  
+  <script src="ResumeCreator.js"></script>
+  
+</body>
+
+</html>

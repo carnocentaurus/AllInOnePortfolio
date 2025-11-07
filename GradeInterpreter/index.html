@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<!--Mar 31, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grade Interpreter</title>
+  <link rel="stylesheet" href="GradeInterpreter.css">
+</head>
+
+<body>
+  
+  
+  <main>
+    <p id="title">GRADE<br>INTERPETER</p>
+    
+    
+    <div id="gradesInputDiv">
+      <section>
+        <label for="englishGradeInput">English</label>
+        <input id="englishGradeInput" type="number" placeholder="Grade">
+      </section>
+      
+      <section>
+        <label for="mathGradeInput">Math</label>
+        <input id="mathGradeInput" type="number" placeholder="Grade">
+      </section>
+      
+      <section>
+        <label for="scienceGradeInput">Science</label>
+        <input id="scienceGradeInput" type="number" placeholder="Grade">
+      </section>
+      
+      <section>
+        <label for="artsGradeInput">Arts</label>
+        <input id="artsGradeInput" type="number" placeholder="Grade">
+      </section>
+      
+      <section>
+        <label for="musicGradeInput">Music</label>
+        <input id="musicGradeInput" type="number" placeholder="Grade">
+      </section>
+      
+      <section>
+        <label for="peGradeInput">PE</label>
+        <input id="peGradeInput" type="number" placeholder="Grade">
+      </section>
+      
+      <section>
+        <label for="historyGradeInput">History</label>
+        <input id="historyGradeInput" type="number" placeholder="Grade">
+      </section>
+      
+      <section>
+        <label for="socialGradeInput">Social</label>
+        <input id="socialGradeInput" type="number" placeholder="Grade">
+      </section>
+      
+      <section>
+        <label for="techGradeInput">Tech</label>
+        <input id="techGradeInput" type="number" placeholder="Grade">
+      </section>
+      
+      <button onclick="handleGrades()">Submit</button>
+    </div>
+    
+    
+    <div id="gradesDisplayDiv">
+      <p id="interpretationDisplay"></p>
+      
+      <p id="highestGradeDisplay" class="gradesDisplay"></p>
+      <p class="gradeLabels">Highest</p>
+      
+      <p id="lowestGradeDisplay" class="gradesDisplay"></p>
+      <p class="gradeLabels">Lowest</p>
+      
+      <p id="averageGradeDisplay" class="gradesDisplay"></p>
+      <p class="gradeLabels">Average</p>
+      
+      <p id="letterGradeDisplay" class="gradesDisplay"></p>
+      <p class="gradeLabels">Letter Grade</p>
+      
+      <p id="resetGradesText">Reset Grades</p>
+    </div>
+  </main>
+  
+  
+  <script src="GradeInterpreter.js"></script>
+  
+</body>
+
+</html>

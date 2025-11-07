@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<!--Apr 6, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="AgeCalculator.css">
+</head>
+
+<body>
+  
+  
+  <main>
+    <p id="title">AGE<br>CALCULATOR </p>
+    
+    <label for="birthdayInput">Enter Birthday</label>
+    <!--oninput on mobile onchange on desktop-->
+    <input type="date" id="birthdayInput" onchange="calcAges()">
+    
+    
+    <div id="ageResultsDiv" style="display: none">
+      <p class="text">You are approximately..</p>
+      
+      <p id="ageInMsDisplay" class="ageDisplay"></p>
+      <p class="timeUnit">Milliseconds</p>
+      
+      <p id="ageInSecondsDisplay" class="ageDisplay"></p>
+      <p class="timeUnit">Seconds</p>
+      
+      <p id="ageInMinutesDisplay" class="ageDisplay"></p>
+      <p class="timeUnit">Minutes</p>
+      
+      <p id="ageInHoursDisplay" class="ageDisplay"></p>
+      <p class="timeUnit">Hours</p>
+      
+      <p id="ageInDaysDisplay" class="ageDisplay"></p>
+      <p class="timeUnit">Days</p>
+      
+      <p id="ageInWeeksDisplay" class="ageDisplay"></p>
+      <p class="timeUnit">Weeks</p>
+      
+      <p id="ageInMonthsDisplay" class="ageDisplay"></p>
+      <p class="timeUnit">Months</p>
+      
+      <p id="ageInYearsDisplay" class="ageDisplay"></p>
+      <p class="timeUnit">Years Old</p>
+    </div>
+  </main>
+  
+  
+  <script src="AgeCalculator.js"></script>
+  
+</body>
+
+</html>

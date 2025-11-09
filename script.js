@@ -40,11 +40,14 @@ ageDisplay.textContent = age;
 
 // form handler
 form.addEventListener("submit", async (e) => {
+    // prevent default refresh or navigate away from page when submitted
     e.preventDefault();
 
+    // automatically collects all the input fields (names and values) into a format suitable for sending with fetch()
     const formData = new FormData(form);
     formData.append("access_key", "6d011ba0-63b9-4bce-95a5-892b48feac36");
 
+    // btn original text
     const originalText = submitBtn.textContent;
     submitBtn.textContent = "Sending...";
     submitBtn.disabled = true;
@@ -59,7 +62,7 @@ form.addEventListener("submit", async (e) => {
 
         if (response.ok) {
             alert("Your message has been sent!");
-            form.reset();
+            form.reset(); // reset form fields
         } 
         else {
             alert("Error: " + data.message);
@@ -68,6 +71,7 @@ form.addEventListener("submit", async (e) => {
     catch (error) {
         alert("Something went wrong. Please try again");
     } 
+    // runs no matter what success or error
     finally {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;

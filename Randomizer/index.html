@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<!--May 15, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Randomizer</title>
+  <link rel="stylesheet" href="Randomizer.css">
+</head>
+
+<body>
+  
+  
+  <main>
+    <p id="title">RANDOMIZER</p>
+    
+    <div id="featuresDiv">
+      <button onclick="openChosenFeature(0)">Random Number</button>
+      <button onclick="openChosenFeature(1)">Random Letter</button>
+      <button onclick="openChosenFeature(2)">Random Date</button>
+      <button onclick="openChosenFeature(3)">Random Country</button>
+      <button onclick="openChosenFeature(4)">Coin Flip</button>
+      <button onclick="openChosenFeature(5)">Custom</button>
+    </div>
+    
+    
+    <div id="randomNumDiv" class="featureDivs">
+      <p class="header">Random Number</p>
+      <p onclick="closeActiveFeature(0)" class="goBackText">Go Back</p>
+      
+      <p id="randomNumDisplay" class="bigDisplay"></p>
+      
+      <input id="minNumInput" type="number" placeholder="Min" required>
+      <input id="maxNumInput" type="number" placeholder="Max" required><br>
+      
+      <button onclick="getRandomNum()">Randomize</button>
+    </div>
+    
+    
+    <div id="randomLetterDiv" class="featureDivs">
+      <p class="header">Random Letter</p>
+      <p onclick="closeActiveFeature(1)" class="goBackText">Go Back</p>
+      
+      <p id="randomLetterDisplay" class="bigDisplay"></p>
+      
+      <input id="letterQuantityInput" type="number" placeholder="Quantity" required>
+      
+      <button onclick="getRandomLetter()">Randomize</button>
+    </div>
+    
+    
+    <div id="randomDateDiv" class="featureDivs">
+      <p class="header">Random Date</p>
+      <p onclick="closeActiveFeature(2)" class="goBackText">Go Back</p>
+      
+      <label>Random Date</label>
+      <p id="randomDateDisplay" class="smallDisplay"></p>
+      
+      <label>Random Time</label>
+      <p id="randomTimeDisplay" class="smallDisplay"></p>
+      
+      <p class="dateInputLabels">Date From</p>
+      <input id="dateFromInput" type="date" placeholder="From" required>
+      
+      <p class="dateInputLabels">Date Until</p>
+      <input id="dateUntilInput" type="date" placeholder="Until" required>
+      
+      <button onclick="getRandomDate()">Randomize</button>
+    </div>
+    
+    
+    <div id="randomCountryDiv" class="featureDivs">
+      <p class="header">Random Country</p>
+      <p onclick="closeActiveFeature(3)" class="goBackText">Go Back</p>
+      
+      <select id="continentSelect">
+        <option value="0">World</option>
+        <option value="1">North America</option>
+        <option value="2">South America </option>
+        <option value="3">Europe</option>
+        <option value="4">Africa</option>
+        <option value="5">Asia</option>
+        <option value="6">Oceania</option>
+      </select>
+      
+      <img id="countryFlagDisplay" src="">
+      
+      <label>Country</label>
+      <p id="countryNameDisplay" class="smallDisplay"></p>
+      
+      <label>Capital</label>
+      <p id="countryCapitalDisplay" class="smallDisplay"></p>
+      
+      <button onclick="getRandomCountry()">Randomize</button>
+    </div>
+    
+    
+    <div id="coinFlipDiv" class="featureDivs">
+      <p class="header">Coin Flip</p>
+      <p onclick="closeActiveFeature(4)" class="goBackText">Go Back</p>
+      
+      <img id="coinImgDisplay" src="">
+      
+      <p id="coinTextDisplay" class="smallDisplay"></p>
+      
+      <button onclick="flipCoin()">Flip</button>
+    </div>
+    
+    
+    <div id="customDiv" class="featureDivs">
+      <p class="header">Custom</p>
+      <p onclick="closeActiveFeature(5)" class="goBackText">Go Back</p>
+      
+      <input id="customValueInput" placeholder="Custom Value" required><br>
+      
+      <button onclick="Custom.popValueFromCustomList()" class="controlBtn">Pop</button>
+      <button onclick="Custom.clearCustomList()" class="controlBtn">Clear</button>
+      <button onclick="Custom.pushValueToCustomList()" class="controlBtn">Add</button>
+      
+      <p id="customListDisplay"></p>
+      
+      <p id="customValueDisplay" class="bigDisplay"></p>
+      
+      <button onclick="Custom.getRandomCustomValue()">Randomize</button>
+    </div>
+  </main>
+  
+
+  <script src="Randomizer.js" type="module"></script>
+  
+</body>
+
+</html>

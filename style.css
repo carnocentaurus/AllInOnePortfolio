@@ -144,7 +144,7 @@ button:hover, a:hover {
 /*desktop*/
 @media only screen and (min-width: 1000px) {
   body {
-    background: url("DesktopLake.jpg") no-repeat fixed center / cover;
+    background: url("desktopLake.jpg") no-repeat fixed center / cover;
   }
 
   #homePage img {

@@ -1,0 +1,3 @@
+add gambia flag
+add kazahkstan in asia.js and its capital
+add taiwan in asia.js and its capital

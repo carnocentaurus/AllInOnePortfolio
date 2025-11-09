@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Righteous";
-  src: url("Righteous-Regular.ttf");
+  src: url("Righteous.ttf");
 }
 
 * {
@@ -127,7 +127,7 @@ div .title {
 #contactPage form input, #contactPage form textarea {
   border: 2px solid #333;
   padding: 0.3rem;
-  color: #666;
+  color: #333;
 }
 
 #contactPage form button {
@@ -144,7 +144,7 @@ button:hover, a:hover {
 /*desktop*/
 @media only screen and (min-width: 1000px) {
   body {
-    background: url("desktopLake.jpg") no-repeat fixed center / cover;
+    background: url("DesktopLake.jpg") no-repeat fixed center / cover;
   }
 
   #homePage img {

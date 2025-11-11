@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Righteous";
+  src: url("Righteous.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*center the main container*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #cfcfcf;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 300px;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 2px #333;
+  text-align: center;
+}
+
+main #title {
+  font-family: "Righteous";
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+main #tabsDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main #tabsDiv #gameTab {
+  font-family: "Poppins";
+  font-weight: bold;
+  color: #333;
+}
+
+main #tabsDiv #statsTab {
+  font-family: "Poppins";
+  color: #666;
+}
+
+main #gameDiv #choicesDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main #gameDiv #resultDisplay {
+  font-family: "Righteous";
+  font-size: 1.2rem;
+  color: #333;
+  margin: 2rem 0 0.5rem;
+}
+
+main #gameDiv #playerChoiceDisplay,
+main #gameDiv #systemChoiceDisplay {
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  color: #333;
+}
+
+main #gameDiv #choicesDiv p {
+  font-size: 2rem;
+  margin-top: 2.5rem;
+  padding: 0.5rem;
+  background-color: #a3a3a3;
+  filter: drop-shadow(1px 1px 1px #333);
+  border-radius: 50%;
+}
+
+main #gameDiv #choicesDiv p:hover {
+  opacity: 80%;
+}
+
+main #statsDiv {
+  display: none;
+}
+
+main #statsDiv div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+main #statsDiv div label {
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+main #statsDiv div p {
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  color: #666;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<!--Apr 12, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="RockPaperScissors.css">
+</head>
+
+<body>
+  
+  
+  <main>
+    <p id="title">ROCK<br>PAPER<br>SCISSORS</p>
+    
+    <div id="tabsDiv">
+      <p onclick="handleTabs(0, 1, 'gameTab')" id="gameTab">Game</p>
+      <p onclick="handleTabs(1, 0, 'statsTab')" id="statsTab">Stats</p>
+    </div>
+    
+    
+    <div id="gameDiv">
+      <p id="resultDisplay"></p>
+      
+      <p id="playerChoiceDisplay"></p>
+      <p id="systemChoiceDisplay"></p>
+      
+      <div id="choicesDiv">
+        <p onclick="playGame(event)">👊</p>
+        <p onclick="playGame(event)">🖐️</p>
+        <p onclick="playGame(event)">✌️</p>
+      </div>
+    </div>
+    
+    
+    <div id="statsDiv">
+      <div id="currentStatsDiv">
+        <label>Current Stats</label>
+        
+        <p id="currentGamesPlayedDisplay"></p>
+      
+        <p id="currentPlayerWinsDisplay"></p>
+        <p id="currentSystemWinsDisplay"></p>
+      
+        <p id="currentTiesDisplay"></p>
+      
+        <p id="currentPlayerWinRateDisplay"></p>
+        <p id="currentSystemWinRateDisplay"></p>
+      </div>
+      
+      
+      <div id="totalStatsDiv">
+        <label>Total Stats</label>
+        
+        <p id="totalGamesPlayedDisplay"></p>
+      
+        <p id="totalPlayerWinsDisplay"></p>
+        <p id="totalSystemWinsDisplay"></p>
+    
+        <p id="totalTiesDisplay"></p>
+      
+        <p id="totalPlayerWinRateDisplay"></p>
+        <p id="totalSystemWinRateDisplay"></p>
+      </div>
+    </div>
+  </main>
+  
+  
+  <script src="RockPaperScissors.js"></script>
+  
+</body>
+
+</html>

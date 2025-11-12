@@ -95,3 +95,7 @@ main button {
   padding: 0.2rem 0;
   width: 8.7rem;
 }
+
+main button:hover {
+  opacity: 80%;
+}

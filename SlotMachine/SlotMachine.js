@@ -107,5 +107,7 @@ function resetBalance() {
     messageDisplay.textContent = "";
     resultDisplay.textContent = "";
     balanceUpdateDisplay.textContent = "";
+
+    betInput.value = "";
   }
 }

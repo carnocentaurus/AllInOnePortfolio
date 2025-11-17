@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<!--Jan 9, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soul Element Personality Quiz</title>
+  <link rel="stylesheet" href="element.css">
+</head>
+
+<body>
+  
+  
+  <!--Home screen-->
+  <div id="home">
+    <img id="elementsImage" src="elements.png" alt="Four elements">
+  
+    <p id="title"><span class="fire">Soul</span><br> <span class="air">Element</span><br> <span class="water">Personality</span><br> <span class="earth">Quiz</span></p>
+  
+    <p id="description">A fun personality quiz to determine what your soul element is! (<span class="fire">Fire</span>, <span class="air">Air</span>, <span class="water">Water</span>, or <span class="earth">Earth</span>!)</p>
+  
+  <!--Starts the quiz-->
+    <button onclick="startQuiz()" class="greenButton">START QUIZ</button>
+  </div>
+  
+  
+  <!--Quiz container-->
+  <div id="quizDiv" style="display: none">
+    <img id="elementsImage" src="elements.png" alt="Four elements">
+    
+    <p id="questionText"></p>
+  
+    <img id="questionImage" src="" alt="Quiz image">
+  
+  <!--The choices go here-->
+    <div id="choicesDiv"></div>
+  
+    <button id="nextQuestion">Next Question</button>
+  </div>
+  
+  
+  <!--Displays when the quiz is over-->
+  <div id="quizResult" style="display: none">
+    <p id="textResult"></p>
+    
+    <img id="imageResult" src="" alt="Element">
+    
+    <p id="resultDescription"></p>
+    
+    <button id="answerAgain" class="greenButton" style="margin: 20px 70px 0">ANSWER AGAIN</button>
+  </div>
+  
+  
+  <script src="element.js"></script>
+
+</body>
+
+</html>

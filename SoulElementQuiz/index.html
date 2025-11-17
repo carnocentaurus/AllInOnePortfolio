@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Jan 9, 2025-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soul Element Quiz</title>
+  <link rel="stylesheet" href="SoulElementQuiz.css">
+</head>
+
+<body>
+
+
+  <main>
+    <p id="title">SOUL<br>ELEMENT<br>QUIZ</p>
+    
+    
+    <div id="homeDiv">
+      <p id="quizDesc">A fun personality quiz to determine what your soul element is. Fire, Water, Earth or Air.</p>
+
+      <button onclick="startQuiz()">Start</button>
+    </div>
+
+
+    <div id="quizDiv">
+      <p id="progressDisplay"></p>
+
+      <p id="questionDisplay"></p>
+
+      <img id="questionImgDisplay" src="" alt="Question Image"><br>
+
+      <div id="choicesDiv" onclick="handleUsersChoice(event)">
+        <button class="choiceButtons"></button>
+        <button class="choiceButtons"></button>
+        <button class="choiceButtons"></button>
+        <button class="choiceButtons"></button>
+      </div>
+
+      <button id="nextQuestionBtn" onclick="renderQuiz()">Next</button>
+      
+      <button id="quizResultsBtn" onclick="renderQuizResults()">Results</button>
+    </div>
+
+
+    <div id="quizResultDiv">
+      <p id="totalPtsDisplay"></p>
+
+      <img id="elementImgDisplay" src="" alt="Element Image">
+      <p id="elementNameDisplay"></p>
+      <p id="elementDescDisplay"></p>
+
+      <button onclick="restartQuiz()">Restart</button>
+    </div>
+  </main>
+
+
+  <script src="main.js" type="module"></script>
+    
+</body>
+
+</html>

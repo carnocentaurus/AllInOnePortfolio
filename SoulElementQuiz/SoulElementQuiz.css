@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Righteous";
+  src: url("Righteous.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*center the main container*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #cfcfcf;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 300px;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 2px #333;
+  text-align: center;
+}
+
+main #title {
+  font-family: "Righteous";
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+main #homeDiv #quizDesc {
+  font-family: "Poppins";
+  font-size: 0.7rem;
+  color: #666;
+  margin: 0 1rem 2rem;
+}
+
+main #quizDiv #progressDisplay {
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  color: #666;
+}
+
+main #quizDiv #questionDisplay {
+  font-family: "Poppins";
+  font-size: 0.9rem;
+  color: #333;
+  margin: 0 1rem 1rem;
+}
+
+main #quizDiv #questionImgDisplay {
+  width: 40%;
+  margin-bottom: 1rem;
+  filter: drop-shadow(1px 1px 1px #333);
+}
+
+main button {
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  color: #f4f4f4;
+  background-color: #333;
+  border: none;
+  border-radius: 0.1rem;
+  margin: 0 auto 0.2rem;
+  padding: 0.2rem 0;
+  width: 12rem;
+}
+
+main button:hover {
+  opacity: 80%;
+}
+
+main #quizDiv #nextQuestionBtn,
+main #quizDiv #quizResultsBtn {
+  display: none;
+  margin-top: 1rem;
+}
+
+main #quizDiv, 
+main #quizResultDiv {
+  display: none;
+}
+
+main #quizResultDiv #totalPtsDisplay,
+main #quizResultDiv #elementDescDisplay {
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+main #quizResultDiv #elementImgDisplay {
+  width: 45%;
+  margin-bottom: 1rem;
+}
+
+main #quizResultDiv #elementNameDisplay {
+  font-family: "Poppins";
+  font-size: 0.9rem;
+  color: #333;
+}

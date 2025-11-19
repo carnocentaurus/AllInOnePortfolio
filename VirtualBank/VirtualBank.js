@@ -203,6 +203,9 @@ class EditAccount {
     
     fullNameDisplay.textContent = EditAccount.formatName(firstName, lastName);
     localStorage.setItem("FullName", fullNameDisplay.textContent);
+
+    const savedProfileImg = localStorage.getItem("VirtualBankProfileImg");
+    profileImgDisplay.src = savedProfileImg || "DefaultProfile.png";
     
     editAccDiv.style.display = "none";
     bankDiv.style.display = "block";

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<!--Feb 24, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virtual Bank</title>
+  <link rel="stylesheet" href="VirtualBank.css">
+</head>
+
+<body>
+  
+  
+  <main>
+    <p id="title">VIRTUAL<br>BANK</p>
+    
+    <section id="pinSection">
+      <input id="pinInput" type="number" placeholder="PIN" required><br>
+      <button onclick="verifyPin()">Enter</button>
+    </section>
+    
+    
+    <div id="bankDiv">
+      <img id="profileImgDisplay" src="" alt="Your Profile">
+      
+      <p id="fullNameDisplay"></p>
+      
+      <p id="balanceDisplay"></p>
+      <label for="balanceDisplay">Balance</label><br><br><br>
+      
+      <button onclick="Withdraw.openDiv()">Withdraw</button>
+      <button onclick="Deposit.openDiv()">Deposit</button>
+      <button onclick="EditAccount.openDiv()">Edit Account</button>
+    </div>
+    
+    
+    <div id="withdrawDiv">
+      <input id="withdrawAmountInput" type="number" placeholder="Amount" required>
+      <button onclick="Withdraw.confirmAction()">Withdraw</button>
+      
+      <p onclick="Withdraw.cancel()">Cancel</p>
+    </div>
+    
+    
+    <div id="depositDiv">
+      <input id="depositAmountInput" type="number" placeholder="Amount" required>
+      <button onclick="Deposit.confirmAction()">Deposit</button>
+      
+      <p onclick="Deposit.cancel()">Cancel</p>
+    </div>
+    
+    
+    <div id="editAccDiv">
+      <img id="profileImgPreviewDisplay" src="" alt="Profile Overview"><br>
+      
+      <label for="profileImgInput">Upload Image</label>
+      <input id="profileImgInput" type="file" accept="image/jpg, image/jpeg, image/png, image/webp">
+      
+      <input id="firstNameInput" placeholder="First Name" required>
+      <input id="lastNameInput" placeholder="Last Name" required>
+      
+      <button onclick="EditAccount.saveChanges()">Save</button>
+      
+      <p onclick="EditAccount.cancel()">Cancel</p>
+    </div>
+  </main>
+  
+  
+  <script src="VirtualBank.js"></script>
+  
+</body>
+
+</html>

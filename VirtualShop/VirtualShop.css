@@ -32,6 +32,11 @@ main {
   overflow-y: scroll;
 }
 
+/*remove default desktop scrollbar*/
+main::-webkit-scrollbar {
+  display: none;
+}
+
 main #logoImgDisplay {
   width: 80%;
   margin: 0.5rem auto 0.8rem;

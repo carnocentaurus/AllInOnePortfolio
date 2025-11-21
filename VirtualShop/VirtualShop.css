@@ -87,3 +87,8 @@ main #foodItemsDiv button {
   border: none;
   border-radius: 0.2rem;
 }
+
+main button:hover,
+main img:hover {
+  opacity: 60%;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<!--Mar 17, 2025-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virtual Shop</title>
+  <link rel="stylesheet" href="VirtualShop.css">
+</head>
+
+<body>
+  
+  
+  <main>
+    <img id="logoImgDisplay" src="GudGrubRed.png" alt="GudGrub Logo">
+    
+    <div id="controlsDiv">
+      <img 
+        onclick="addAllItems()"
+        src="icons/check.png"
+        alt="Check Icon"
+      >
+      <img 
+        onclick="removeAllItems()"
+        src="icons/x.png"
+        alt="X Icon"
+      >
+      <img 
+        onclick="clearItems()"
+        src="icons/reset.png"
+        alt="Reset Icon"
+      >
+    </div>
+    
+    
+    <p id="numbersDisplay">0 PHP • 0 Items</p>
+    
+    
+    <div id="foodItemsDiv">
+      <section>
+        <p id="hamburgerQuantityDisplay" class="quantityDisplay"></p>
+        <img src="FoodItems/hamburger.png" alt="Hamburger">
+        <p class="priceDisplay">50 PHP</p>
+        <button onclick="removeItem(0)">-</button>
+        <button onclick="addItem(0)">+</button>
+      </section>
+      
+      <section>
+        <p id="friesQuantityDisplay" class="quantityDisplay"></p>
+        <img src="FoodItems/fries.png" alt="Fries">
+        <p class="priceDisplay">30 PHP</p>
+        <button onclick="removeItem(1)">-</button>
+        <button onclick="addItem(1)">+</button>
+      </section>
+      
+      <section>
+        <p id="friedChickenQuantityDisplay" class="quantityDisplay"></p>
+        <img src="FoodItems/friedChicken.png" alt="Fried Chicken">
+        <p class="priceDisplay">40 PHP</p>
+        <button onclick="removeItem(2)">-</button>
+        <button onclick="addItem(2)">+</button>
+      </section>
+      
+      <section>
+        <p id="pieQuantityDisplay" class="quantityDisplay"></p>
+        <img src="FoodItems/pie.png" alt="Pie">
+        <p class="priceDisplay">60 PHP</p>
+        <button onclick="removeItem(3)">-</button>
+        <button onclick="addItem(3)">+</button>
+      </section>
+      
+      <section>
+        <p id="pizzaQuantityDisplay" class="quantityDisplay"></p>
+        <img src="FoodItems/pizza.png" alt="Pizza">
+        <p class="priceDisplay">250 PHP</p>
+        <button onclick="removeItem(4)">-</button>
+        <button onclick="addItem(4)">+</button>
+      </section>
+      
+      <section>
+        <p id="cokeQuantityDisplay" class="quantityDisplay"></p>
+        <img src="FoodItems/coke.png" alt="Coke">
+        <p class="priceDisplay">20 PHP</p>
+        <button onclick="removeItem(5)">-</button>
+        <button onclick="addItem(5)">+</button>
+      </section>
+      
+      <section>
+        <p id="spriteQuantityDisplay" class="quantityDisplay"></p>
+        <img src="FoodItems/sprite.png" alt="Sprite">
+        <p class="priceDisplay">20 PHP</p>
+        <button onclick="removeItem(6)">-</button>
+        <button onclick="addItem(6)">+</button>
+      </section>
+      
+      <section>
+        <p id="chicharonQuantityDisplay" class="quantityDisplay"></p>
+        <img src="FoodItems/chicharon.png" alt="Chicharon">
+        <p class="priceDisplay">15 PHP</p>
+        <button onclick="removeItem(7)">-</button>
+        <button onclick="addItem(7)">+</button>
+      </section>
+      
+      <section>
+        <p id="spaghettiQuantityDisplay" class="quantityDisplay"></p>
+        <img src="FoodItems/spaghetti.png" alt="Spaghetti">
+        <p class="priceDisplay">60 PHP</p>
+        <button onclick="removeItem(8)">-</button>
+        <button onclick="addItem(8)">+</button>
+      </section>
+      
+      <section>
+        <p id="cakeQuantityDisplay" class="quantityDisplay"></p>
+        <img src="FoodItems/cake.png" alt="Cake">
+        <p class="priceDisplay">150 PHP</p>
+        <button onclick="removeItem(9)">-</button>
+        <button onclick="addItem(9)">+</button>
+      </section>
+    </div>
+    
+  
+  </main>
+  
+  
+  <script src="VirtualShop.js"></script>
+  
+</body>
+
+</html>

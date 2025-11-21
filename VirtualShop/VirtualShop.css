@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins.ttf");
+}
+
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*center the main container*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #cfcfcf;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 300px;
+  max-height: 450px;
+  border-radius: 0.3rem;
+  padding: 1.5rem 1rem;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 2px #333;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+main #logoImgDisplay {
+  width: 80%;
+  margin: 0.5rem auto 0.8rem;
+}
+
+main #controlsDiv {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 1.5rem 1rem;
+}
+
+main #controlsDiv img {
+  width: 10%;
+}
+
+main #numbersDisplay {
+  font-size: 0.7rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+main #foodItemsDiv section {
+  margin-bottom: 1.8rem;
+}
+
+main #foodItemsDiv .quantityDisplay {
+  color: #666;
+  font-size: 0.7rem;
+}
+
+main #foodItemsDiv section img {
+  width: 40%;
+  filter: drop-shadow(2px 2px 0 red);
+}
+
+main #foodItemsDiv .priceDisplay {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+main #foodItemsDiv button {
+  color: #f4f4f4;
+  background-color: red;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  margin: 0 0.3rem;
+  border: none;
+  border-radius: 0.2rem;
+}

@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "Righteous";
-  src: url("Righteous.ttf");
-}
-
-@font-face {
   font-family: "Poppins";
   src: url("Poppins.ttf");
 }
@@ -64,6 +59,10 @@ main #buttonsDiv button {
   border-radius: 50%;
   border: none;
   color: #f4f4f4;
+}
+
+main #buttonsDiv button:hover {
+  opacity: 80%;
 }
 
 main #buttonsDiv .operators,

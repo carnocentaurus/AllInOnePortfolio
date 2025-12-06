@@ -31,7 +31,7 @@ A simple calculator web application built with HTML, CSS, and vanilla JavaScript
 - [Calculator Demo](CalculatorDemo.png)
 
 ## How to Run
-1. Navigate to the Pokedex folder:
+1. Navigate to the Calculator folder:
    ```bash
    cd Calculator
    ```

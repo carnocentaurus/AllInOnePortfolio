@@ -34,6 +34,9 @@ A simple slot machine game built with HTML, CSS, and vanilla JavaScript. Players
 7. Balance is updated and displayed dynamically  
 8. Reset button restores balance to 100 and clears messages
 
+## Screenshot
+[SlotMachine Demo](SlotMachineDemo.png)
+
 ## How to Run
 1. Navigate to the SlotMachine folder:
    ```bash

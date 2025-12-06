@@ -42,10 +42,8 @@ Pokedex/
 If the user enters an invalid Pokémon name or ID, an error message is displayed.
 
 ## Screenshots
-```markdown
-[Random Pokemon](PokedexRandomTab.png)
-[Search Pokemon](PokedexSearchTab.png)
-```
+- [Random Pokemon](PokedexRandomTab.png)
+- [Search Pokemon](PokedexSearchTab.png)
 
 ## How to Run
 1. Navigate to the Pokedex folder:

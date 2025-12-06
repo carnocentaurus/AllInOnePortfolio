@@ -13,10 +13,21 @@ function clearDisplay() {
   display.value = "";
 }
 
+
 function calculate() {
   try {
-    display.value = eval(display.value);
-  }
+    const input = display.value;
+
+    // only allow safe characters: digits, operators, dot, parentheses, spaces
+    const safeExpression = input.replace(/[^0-9+\-*/(). ]/g, '');
+
+    if (safeExpression !== input) {
+      alert("Invalid characters!");
+    }
+
+    const result = Function('"use strict"; return (' + safeExpression + ')')();
+    display.value = result;
+  } 
   catch (error) {
     display.value = "Error";
   }

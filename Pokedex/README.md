@@ -17,17 +17,6 @@ A simple, interactive Pokédex web application built with HTML, CSS, and vanilla
 | Fetch API | Retrieves Pokémon data |
 | PokéAPI | External data source |
 
-## Project Structure
-```
-Pokedex/
-├── index.html
-├── Pokedex.css
-├── Pokedex.js
-|__ Poppins.ttf
-|__ README.md
-|__ Righteous.ttf
-```
-
 ## How It Works
 1. User enters a Pokemon name/ID number or fetch a random Pokemon
 2. JavaScript triggers a `fetch()` request to the PokéAPI endpoint:

@@ -21,7 +21,6 @@ No build tools or dependencies required.
 ## Projects
 
 ### Productivity Tools
-
 | Project | Description |
 |---------|-------------|
 | Task Manager | To-do list with CRUD operations and localStorage persistence |
@@ -31,7 +30,6 @@ No build tools or dependencies required.
 | Clock & Calendar | Real-time display with calendar navigation |
 
 ### Games
-
 | Project | Description |
 |---------|-------------|
 | Number Guessing Game | Classic guessing game |
@@ -40,7 +38,6 @@ No build tools or dependencies required.
 | Soul Element Quiz | Personality assessment |
 
 ### API-Powered Applications
-
 | Project | Description | API Used |
 |---------|-------------|----------|
 | Weather System | Real-time weather dashboard | OpenWeatherMap API |
@@ -49,10 +46,9 @@ No build tools or dependencies required.
 | Image Viewer | Lightweight image gallery with preview | Picsum
 
 ### Calculators & Utilities
-
 | Project | Description |
 |---------|-------------|
-| Calculator | Basic calculator with keyboard support |
+| Calculator | Basic calculator with input validation |
 | Multiplication Table | Dynamic table generator with custom ranges |
 | Grade Interpreter | Academic grade analyzer with GPA calculation |
 | Randomizer | Random number, letters, date, countries and custom |
@@ -70,13 +66,9 @@ No build tools or dependencies required.
 - Real-time price calculations
 
 ## Technology Stack
-
 **Frontend:** HTML5, CSS3, Vanilla JavaScript (ES6+)
-
 **Storage:** LocalStorage
-
 **Network:** Fetch API, Async/Await
-
 **Design:** Flexbox, Grid, CSS Custom Properties
 
 **Why Vanilla JavaScript?**
@@ -85,7 +77,6 @@ No build tools or dependencies required.
 - Maximum browser compatibility
 
 ## Repository Structure
-
 ```
 portfolio4/
 │
@@ -115,11 +106,9 @@ portfolio4/
 ├── VirtualShop/
 └── WeatherSystem/
 ```
-
 Each project folder contains its own `index.html`, `ProjectName.css`, and `ProjectName.js`.
 
 ## Key Features
-
 - 15+ fully functional projects
 - Pure vanilla JavaScript throughout
 - Responsive design for all devices

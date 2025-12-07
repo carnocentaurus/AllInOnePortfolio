@@ -62,7 +62,7 @@ async function fetchWeatherData() {
     // convert wind data from mph to km/h
     const windSpeed = data.wind.speed * 3.6;
     const windDirection = getWindDirection(data.wind.deg);
-    const peakWind = data.wind.gust * 3.6;
+    const peakWind = data.wind.gust ? data.wind.gust * 3.6 : null;
     
     displayDiv.style.display = "block";
     
@@ -73,7 +73,7 @@ async function fetchWeatherData() {
     
     windSpeedDisplay.textContent = `${windSpeed.toFixed(2)} km/h`;
     windDirectionDisplay.textContent = `${windDirection}`;
-    peakWindDisplay.textContent = `${peakWind.toFixed(2)} km/h`;
+    peakWindDisplay.textContent = peakWind ? `${peakWind.toFixed(2)} km/h` : "No peak wind data";
   }
   
   catch (error) {

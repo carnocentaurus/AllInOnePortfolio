@@ -45,7 +45,7 @@ Saved keys:
 Each action (deposit, withdraw, edit account) hides the main dashboard and shows a dedicated section.  
 Cancel operations bring you back safely.
 
-## How the App Works
+## How it Works
 ### 1. **PIN Verification**
 ```js
 if (pinInput.value !== pin) alert("Wrong PIN!");
@@ -70,6 +70,12 @@ If correct:
 - Formats name  
 - Saves name  
 - Validation checks for blank names or overly long names  
+
+## Screenshots
+- [VirtualBank Pin Entry](./screenshots/VirtualBankPinEntry.png)
+- [VirtualBank Home Screen](./screenshots/VirtualBankHome.png)
+- [VirtualBank Withdraw and Deposit (Same UI)](./screenshots/VirtualBankWithdrawAndDeposit.png)
+- [VirtualBank Edit Account](./screenshots/VirtualBankEditAccount.png)
 
 ## Tech Stack
 | Technology | Purpose |

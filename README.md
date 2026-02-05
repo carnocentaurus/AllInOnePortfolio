@@ -1,5 +1,5 @@
 # Multi-Project Web Portfolio
-A collection of **15+ vanilla JavaScript mini-projects**, tools, games, and simulations — all bundled into a single interactive portfolio website.  
+A collection of **20 vanilla JavaScript mini-projects**, tools, games, and simulations — all bundled into a single interactive portfolio website.  
 This repository showcases my journey in front-end development through practical, self-contained apps built with **HTML, CSS, and JavaScript (ES6)**.
 
 [Live Demo](https://all-in-one-portfolio-three.vercel.app/)

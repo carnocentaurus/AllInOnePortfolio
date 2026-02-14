@@ -1,8 +1,8 @@
 export const asia = [
   { country: "Afghanistan", capital: "Kabul", flag: "Asia/Afghanistan.png" },
-  { country: "Bahrain", capital: "Manama", flag: "Asia/Bahrain .png" },
+  { country: "Bahrain", capital: "Manama", flag: "Asia/Bahrain.png" },
   { country: "Bangladesh", capital: "Dhaka", flag: "Asia/Bangladesh.png" },
-  { country: "Bhutan", capital: "Thimphu", flag: "Asia/Bhutan .png" },
+  { country: "Bhutan", capital: "Thimphu", flag: "Asia/Bhutan.png" },
   { country: "Brunei", capital: "Bandar Seri Begawan", flag: "Asia/Brunei.png" },
   { country: "Cambodia", capital: "Phnom Penh", flag: "Asia/Cambodia.png" },
   { country: "China", capital: "Beijing", flag: "Asia/China.png" },

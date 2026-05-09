@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--May 4, 2026-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Live Editor</title>
+    <link rel="stylesheet" href="MarkdownLiveEditor.css">
+
+    <!--libraries-->
+    <script src="./libraries/marked.umd.js"></script>
+    <script src="./libraries/purify.min.js"></script>
+</head>
+<body>
+
+    <p class="title">MARKDOWN LIVE EDITOR</p>
+
+    <main>
+        <div class="plaintext-input-div">
+            <textarea 
+                id="plaintext-input"
+                oninput="renderMarkdown()"
+                placeholder="Input Text"
+            ></textarea>
+        </div>
+
+        <div class="markdown-output-div">
+            <div id="markdown-output-display" data-placeholder="Output Markdown"></div>
+            <button onclick="window.print()">Print PDF</button>
+        </div>
+    </main>
+
+    <script src="MarkdownLiveEditor.js"></script>
+    
+</body>
+</html>

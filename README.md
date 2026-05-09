@@ -1,5 +1,5 @@
 # Multi-Project Web Portfolio
-A collection of **20 vanilla JavaScript mini-projects**, tools, games, and simulations — all bundled into a single interactive portfolio website.  
+A collection of **21 vanilla JavaScript mini-projects**, tools, games, and simulations — all bundled into a single interactive portfolio website.  
 This repository showcases my journey in front-end development through practical, self-contained apps built with **HTML, CSS, and JavaScript (ES6)**.
 
 [Live Demo](https://all-in-one-portfolio-three.vercel.app/)
@@ -24,6 +24,7 @@ No build tools or dependencies required.
 | Project | Description |
 |---------|-------------|
 | Task Manager | To-do list with CRUD operations and localStorage persistence |
+| Markdown Live Editor | Real-time Markdown rendering with PDF export |
 | Countdown Timer | Customizable timer with alerts and visual feedback |
 | Resume Creator | Interactive resume builder with form validation |
 | Age Calculator | Precise age computation with date parsing |
@@ -92,6 +93,7 @@ portfolio4/
 ├── CountdownTimer/
 ├── GradeInterpreter/
 ├── ImageViewer/
+├── MarkdownLiveEditor/
 ├── MultiplicationTable/
 ├── NumberGuessingGame/
 ├── Pokedex/
@@ -109,7 +111,7 @@ portfolio4/
 Each project folder contains its own `index.html`, `ProjectName.css`, and `ProjectName.js`.
 
 ## Key Features
-- 15+ fully functional projects
+- 20+ fully functional projects
 - Pure vanilla JavaScript throughout
 - Responsive design for all devices
 - Real-world API integration examples
@@ -139,6 +141,6 @@ Each project folder contains its own `index.html`, `ProjectName.css`, and `Proje
 - User experience optimization
 
 ## Links
-- GitHub: [github.com/carnocentaurus](https://github.com/yourusername)
+- GitHub: [github.com/carnocentaurus](https://github.com/carnocentaurus)
 - React Portfolio: [ReactPortfolio](https://react-portfolio-nu-seven-37.vercel.app/)
 - Portfolio: [AllInOnePortfolio](https://all-in-one-portfolio-three.vercel.app/)

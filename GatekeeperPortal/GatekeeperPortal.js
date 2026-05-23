@@ -40,3 +40,20 @@ function showDiv(activeDiv) {
 
     activeDiv.classList.remove('hidden-div');
 }
+
+
+function handleTextDisplay() {
+    if (isLogIn) {
+        authTitle.textContent = 'Log in to your account';
+        authBtn.innerText = 'Log In';
+        // change the text node directly before the span
+        authAccountText.childNodes[0].textContent = 'Dont have an account? ';
+        authInsteadText.textContent = 'Sign Up';
+    }
+    else {
+        authTitle.textContent = 'Create Account';
+        authBtn.innerText = 'Create Account';
+        authAccountText.childNodes[0].textContent = 'Already have an account? ';
+        authInsteadText.textContent = 'Log In';
+    }
+}

@@ -57,3 +57,32 @@ function handleTextDisplay() {
         authInsteadText.textContent = 'Log In';
     }
 }
+
+
+// auth
+authForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const email = emailInput.value;
+    const password = passwordInput.value;
+
+    if (isLogIn) {
+        const {data, error} = await supabaseClient.auth.signInWithPassword({email, password});
+        alert('Log in successful!');
+
+        if (error) alert(`Log in error: ${error.message}`);
+    }
+    // account creation
+    else {
+        const {data, error} = await supabaseClient.auth.signUp({email, password});
+
+        if (error) {
+            alert(`Sign up error: ${error.message}`);
+        }
+        else {
+            alert('Sign up success!');
+            isLogIn = true;
+            handleTextDisplay();
+        }
+    }
+});

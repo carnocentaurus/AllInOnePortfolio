@@ -109,3 +109,20 @@ authInsteadText.onclick = () => {
     isLogIn = !isLogIn;
     handleTextDisplay();
 }
+
+// shows log in screen on boot since isLogIn is true
+handleTextDisplay(); 
+
+
+// auth state changes
+supabaseClient.auth.onAuthStateChange((event, session) => {
+    if (session) {
+        welcomeMsgDisplay.textContent = `Welcome, ${session.user.email}`;
+        showDiv(dashboardDiv);
+        authForm.reset();
+    }
+    else {
+        welcomeMsgDisplay.textContent = '';
+        showDiv(landingScreenDiv);
+    }
+});

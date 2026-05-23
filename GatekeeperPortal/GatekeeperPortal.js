@@ -86,3 +86,26 @@ authForm.addEventListener('submit', async (event) => {
         }
     }
 });
+
+
+function handleLogOut() {
+    const {error} = await supabaseClient.auth.signOut();
+
+    if (error) {
+        alert(`Log out error: ${error.message}`);
+    }
+    else {
+        authForm.reset();
+        showDiv(landingScreenDiv);
+    }
+}
+
+
+startBtn.onclick = () => showDiv(authDiv);
+backBtn.onclick = () => showDiv(landingScreenDiv);
+updatePasswordBtn.onclick = () => showDiv(updatePasswordDiv);
+// flip boolean upon clicking the link
+authInsteadText.onclick = () => {
+    isLogIn = !isLogIn;
+    handleTextDisplay();
+}

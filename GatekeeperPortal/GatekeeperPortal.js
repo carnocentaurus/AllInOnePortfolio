@@ -1,3 +1,5 @@
+const { act } = require("react");
+
 const SUPABASE_PROJECT_URL = 'https://yigdkkczudxmkdchzzwv.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_adM37VUFSG7zLzlMcLOEAw_mBDnKYII';
 const supabaseClient = supabase.createClient(SUPABASE_PROJECT_URL, SUPABASE_PUBLISHABLE_KEY);
@@ -7,6 +9,7 @@ const landingScreenDiv = document.getElementById('landing-screen-div');
 const startBtn = document.getElementById('start-btn');
 
 // auth div
+const authDiv = document.getElementById('auth-div');
 const authTitle = document.getElementById('auth-title');
 const authForm = document.getElementById('auth-form');
 const emailInput = document.getElementById('email-input');
@@ -25,3 +28,15 @@ const updatePasswordBtn = document.getElementById('update-password-btn');
 const updatePasswordDiv = document.getElementById('update-password-div');
 const updatePasswordForm = document.getElementById('update-password-form');
 const newPasswordInput = document.getElementById('new-password-input');
+
+let isLogIn = true;
+
+
+function showDiv(activeDiv) {
+    landingScreenDiv.classList.add('hidden-div');
+    authDiv.classList.add('hidden-div');
+    dashboardDiv.classList.add('hidden-div');
+    updatePasswordDiv.classList.add('hidden-div');
+
+    activeDiv.classList.remove('hidden-div');
+}

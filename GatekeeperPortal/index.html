@@ -12,6 +12,7 @@
 
 
     <main>
+        <!--LANDING SCREEN DIV-->
         <div id="landing-screen-div">
             <p class="title">GATEKEEPER PORTAL</p>
 
@@ -22,6 +23,22 @@
             </p>
 
             <button id="start-btn">Start</button>
+        </div>
+
+
+        <!--AUTH DIV-->
+        <div id="auth-div" class="hidden-div">
+            <p id="auth-title"></p>
+
+            <form id="auth-form">
+                <input id="email-input" placeholder="Email">
+                <input id="password-input" placeholder="Password">
+                <button id="auth-btn"></button>
+            </form>
+
+            <p id="auth-account-text"><span id="account-instead-text"></span> instead.</p>
+
+            <button id="back-btn">Back to Landing Screen</button>
         </div>
     </main>
 

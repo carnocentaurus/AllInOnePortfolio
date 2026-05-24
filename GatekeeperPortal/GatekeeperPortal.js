@@ -126,3 +126,20 @@ supabaseClient.auth.onAuthStateChange((event, session) => {
         showDiv(landingScreenDiv);
     }
 });
+
+
+updatePasswordForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const newPassword = newPasswordInput.value;
+
+    const {data, error} = await supabaseClient.auth.updateUser({password: newPassword});
+
+    if (error) {
+        alert(`Password update failed: ${error.message}`);
+    }
+    else {
+        alert('Password updated successfully!');
+        updatePasswordForm.reset();
+    }
+});

@@ -78,9 +78,13 @@ authForm.addEventListener('submit', async (event) => {
     }
     else {
         const {data, error} = await supabaseClient.auth.signInWithPassword({email, password});
-        alert('Log in successful!');
 
-        if (error) alert(`Log in error: ${error.message}`);
+        if (error) {
+            alert(`Log in error: ${error.message}`);
+            return;
+        }
+
+        alert('Log in successful!');
     }
 });
 

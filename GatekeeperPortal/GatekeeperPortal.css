@@ -58,3 +58,29 @@ main #dashboard-div .dashboard-text {
     font-family: 'righteous';
     font-size: 3rem;
 }
+
+main #auth-div #auth-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    text-align: center;
+}
+
+main #auth-div #auth-form input,
+main #dashboard-div #update-password-form #new-password-input {
+    border: 1px solid #333;
+    height: 2.2rem;
+    padding-left: 0.5rem;
+    overflow-x: scroll;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+main #auth-div #auth-form #auth-btn,
+main #dashboard-div #welcome-msg-display {
+    margin-bottom: 2rem;
+}
+
+main #auth-div #auth-instead-text {
+    color: blue;
+}

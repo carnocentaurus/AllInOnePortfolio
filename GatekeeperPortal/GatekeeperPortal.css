@@ -1,3 +1,45 @@
+@font-face {
+    font-family: 'righteous';
+    src: url('./fonts/Righteous.ttf');
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('./fonts/Poppins.ttf');
+}
+
+* {
+    font-family: 'poppins';
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cfcfcf;
+    margin: 1.5rem;
+    overflow-y: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    color: #f4f4f4;
+    background-color: #333;
+    border: none;
+    padding: 0.3rem 0;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
 main .hidden-div {
     display: none !important;
 }

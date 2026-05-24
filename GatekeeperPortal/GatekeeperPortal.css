@@ -46,7 +46,8 @@ main .hidden-div {
 
 main #landing-screen-div,
 main #auth-div,
-main #dashboard-div {
+main #dashboard-div,
+main #update-password-div {
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
@@ -59,7 +60,8 @@ main #dashboard-div .dashboard-text {
     font-size: 3rem;
 }
 
-main #auth-div #auth-form {
+main #auth-div #auth-form,
+main #update-password-div #update-password-form {
     display: flex;
     flex-direction: column;
     row-gap: 0.3rem;
@@ -67,7 +69,7 @@ main #auth-div #auth-form {
 }
 
 main #auth-div #auth-form input,
-main #dashboard-div #update-password-form #new-password-input {
+main #update-password-div #update-password-form #new-password-input {
     border: 1px solid #333;
     height: 2.2rem;
     padding-left: 0.5rem;

@@ -43,3 +43,18 @@ button:hover {
 main .hidden-div {
     display: none !important;
 }
+
+main #landing-screen-div,
+main #auth-div,
+main #dashboard-div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    text-align: center;
+}
+
+main #landing-screen-div .title,
+main #dashboard-div .dashboard-text {
+    font-family: 'righteous';
+    font-size: 3rem;
+}

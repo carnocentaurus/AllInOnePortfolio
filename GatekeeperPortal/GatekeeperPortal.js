@@ -65,16 +65,20 @@ authForm.addEventListener('submit', async (event) => {
     const password = passwordInput.value;
 
     if (isSignUp) {
+        if (!String(email).includes('@gmail.com')) {
+            alert('Email must contain `@gmail.com` at the end!');
+            return;
+        }
+
         const {data, error} = await supabaseClient.auth.signUp({email, password});
 
         if (error) {
             alert(`Sign up error: ${error.message}`);
         }
-        else {
-            alert('Sign up success!');
-            isSignUp = false;
-            handleTextDisplay();
-        }
+
+        alert('Sign up success!');
+        isSignUp = false;
+        handleTextDisplay();
     }
     else {
         const {data, error} = await supabaseClient.auth.signInWithPassword({email, password});
@@ -118,7 +122,7 @@ handleTextDisplay();
 // auth state changes
 supabaseClient.auth.onAuthStateChange((event, session) => {
     if (session) {
-        welcomeMsgDisplay.textContent = `Welcome, ${session.user.email}`;
+        welcomeMsgDisplay.textContent = `Welcome, ${session.user.email}!`;
         showDiv(dashboardDiv);
         authForm.reset();
     }

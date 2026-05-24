@@ -1,5 +1,3 @@
-const { act } = require("react");
-
 const SUPABASE_PROJECT_URL = 'https://yigdkkczudxmkdchzzwv.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_adM37VUFSG7zLzlMcLOEAw_mBDnKYII';
 const supabaseClient = supabase.createClient(SUPABASE_PROJECT_URL, SUPABASE_PUBLISHABLE_KEY);
@@ -29,7 +27,7 @@ const updatePasswordDiv = document.getElementById('update-password-div');
 const updatePasswordForm = document.getElementById('update-password-form');
 const newPasswordInput = document.getElementById('new-password-input');
 
-let isLogIn = true;
+let isSignUp = false; // start as log in
 
 
 function showDiv(activeDiv) {
@@ -43,18 +41,18 @@ function showDiv(activeDiv) {
 
 
 function handleTextDisplay() {
-    if (isLogIn) {
-        authTitle.textContent = 'Log in to your account';
-        authBtn.innerText = 'Log In';
-        // change the text node directly before the span
-        authAccountText.childNodes[0].textContent = 'Dont have an account? ';
-        authInsteadText.textContent = 'Sign Up';
-    }
-    else {
+    if (isSignUp) {
         authTitle.textContent = 'Create Account';
         authBtn.innerText = 'Create Account';
+        // change the text node directly before the span
         authAccountText.childNodes[0].textContent = 'Already have an account? ';
         authInsteadText.textContent = 'Log In';
+    }
+    else {
+        authTitle.textContent = 'Log in to your account';
+        authBtn.innerText = 'Log In';
+        authAccountText.childNodes[0].textContent = 'Dont have an account? ';
+        authInsteadText.textContent = 'Sign Up';
     }
 }
 
@@ -66,14 +64,7 @@ authForm.addEventListener('submit', async (event) => {
     const email = emailInput.value;
     const password = passwordInput.value;
 
-    if (isLogIn) {
-        const {data, error} = await supabaseClient.auth.signInWithPassword({email, password});
-        alert('Log in successful!');
-
-        if (error) alert(`Log in error: ${error.message}`);
-    }
-    // account creation
-    else {
+    if (isSignUp) {
         const {data, error} = await supabaseClient.auth.signUp({email, password});
 
         if (error) {
@@ -81,14 +72,20 @@ authForm.addEventListener('submit', async (event) => {
         }
         else {
             alert('Sign up success!');
-            isLogIn = true;
+            isSignUp = false;
             handleTextDisplay();
         }
+    }
+    else {
+        const {data, error} = await supabaseClient.auth.signInWithPassword({email, password});
+        alert('Log in successful!');
+
+        if (error) alert(`Log in error: ${error.message}`);
     }
 });
 
 
-function handleLogOut() {
+async function handleLogOut() {
     const {error} = await supabaseClient.auth.signOut();
 
     if (error) {
@@ -106,12 +103,12 @@ backBtn.onclick = () => showDiv(landingScreenDiv);
 updatePasswordBtn.onclick = () => showDiv(updatePasswordDiv);
 // flip boolean upon clicking the link
 authInsteadText.onclick = () => {
-    isLogIn = !isLogIn;
+    isSignUp = !isSignUp;
     handleTextDisplay();
 }
 
-// shows log in screen on boot since isLogIn is true
-handleTextDisplay(); 
+// shows log in screen on boot since isSignUp is false
+handleTextDisplay();
 
 
 // auth state changes
@@ -142,4 +139,4 @@ updatePasswordForm.addEventListener('submit', async (event) => {
         alert('Password updated successfully!');
         updatePasswordForm.reset();
     }
-});
+}); 

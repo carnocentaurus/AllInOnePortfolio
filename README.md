@@ -1,5 +1,5 @@
 # Multi-Project Web Portfolio
-A collection of **21 vanilla JavaScript mini-projects**, tools, games, and simulations — all bundled into a single interactive portfolio website.  
+A collection of **22 vanilla JavaScript mini-projects**, tools, games, and simulations — all bundled into a single interactive portfolio website.  
 This repository showcases my journey in front-end development through practical, self-contained apps built with **HTML, CSS, and JavaScript (ES6)**.
 
 [Live Demo](https://all-in-one-portfolio-three.vercel.app/)
@@ -44,7 +44,8 @@ No build tools or dependencies required.
 | Weather System | Real-time weather dashboard | OpenWeatherMap API |
 | Pokedex | Comprehensive Pokémon database | PokéAPI |
 | Random Joke Generator | On-demand comedy | JokeAPI |
-| Image Viewer | Lightweight image gallery with preview | Picsum
+| Image Viewer | Lightweight image gallery with preview | Picsum |
+| Gatekeeper Portal | Secure authentication skeleton | Supabase Auth |
 
 ### Calculators & Utilities
 | Project | Description |
@@ -53,6 +54,7 @@ No build tools or dependencies required.
 | Multiplication Table | Dynamic table generator with custom ranges |
 | Grade Interpreter | Academic grade analyzer with GPA calculation |
 | Randomizer | Random number, letters, date, countries and custom |
+| Random Password Generator | Secure password creator with length options |
 
 ### Simulations
 
@@ -91,6 +93,7 @@ portfolio4/
 ├── Calculator/
 ├── ClockAndCalendar/
 ├── CountdownTimer/
+├── GatekeeperPortal/
 ├── GradeInterpreter/
 ├── ImageViewer/
 ├── MarkdownLiveEditor/
@@ -99,6 +102,7 @@ portfolio4/
 ├── Pokedex/
 ├── Randomizer/
 ├── RandomJokeGenerator/
+├── RandomPasswordGenerator/
 ├── ResumeCreator/
 ├── RockPaperScissors/
 ├── SlotMachine/

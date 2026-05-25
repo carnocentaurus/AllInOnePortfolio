@@ -87,7 +87,7 @@ main #auth-div #auth-instead-text {
 @media (min-width: 768px) {
     * {font-size: 1.3rem}
 
-    body {margin: 3.5rem}
+    body {margin: 0 3.5rem}
 
     button {padding: 0.5rem 0}
 
@@ -101,5 +101,28 @@ main #auth-div #auth-instead-text {
     main #update-password-div #update-password-form #new-password-input {
         padding-left: 0.7rem;
         height: 2.5rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    * {font-size: 1rem}
+
+    body {margin: 0 30rem}
+
+    button {padding: 0.3rem 0}
+    
+    main #landing-screen-div #start-btn,
+    main #dashboard-div button {margin: 0 6rem}
+
+    main #landing-screen-div .title,
+    main #dashboard-div .dashboard-text {font-size: 6rem}
+
+    main #auth-div #auth-form,
+    main #update-password-div #update-password-form {row-gap: 0.3rem}
+
+    main #auth-div #auth-form input,
+    main #update-password-div #update-password-form #new-password-input {
+        padding-left: 0.5rem;
+        height: 2rem;
     }
 }

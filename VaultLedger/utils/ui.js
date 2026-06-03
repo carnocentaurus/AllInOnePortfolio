@@ -55,3 +55,21 @@ export const domElements = {
   changePasswordConfirmBtn: document.getElementById('change-password-confirm-btn'),
   changePasswordCancelBtn: document.getElementById('change-password-cancel-btn')
 };
+
+
+export function swithView(targetViewId) {
+    const allViews = [
+        domElements.homeDiv, domElements.authDiv, domElements.dashboardDiv,
+        domElements.withdrawDiv, domElements.depositDiv, domElements.manageAccountDiv,
+        domElements.changeEmailDiv, domElements.changePasswordDiv
+    ];
+
+    allViews.forEach(view => {
+        if (view.id === targetViewId) {
+            view.id.classList.remove('hidden');
+        }
+        else {
+            view.id.classList.add('hidden');
+        }
+    })
+}

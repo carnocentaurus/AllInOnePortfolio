@@ -27,3 +27,24 @@ export async function logOutUser() {
     const {error} = await supabaseClient.auth.signOut();
     if (error) throw error;
 }
+
+
+export async function updateUserEmail(newEmail) {
+    if (!String(newEmail).includes('@gmail.com')) {
+        throw new Error('Email must contain `@gmail.com` at the end!');
+        return;
+    }
+
+    const {data, error} = await supabaseClient.auth.updateUser({email: newEmail});
+    if (error) throw error;
+
+    return data;
+}
+
+
+export async function updateUserPassword(newPassword) {
+    const {data, error} = await supabaseClient.auth.updateUser({password: newPassword});
+    if (error) throw error;
+
+    return data;
+}

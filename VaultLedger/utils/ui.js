@@ -7,6 +7,7 @@ export const domElements = {
 
   // auth
   authDiv: document.getElementById('auth-div'),
+  authTitle: document.getElementById('auth-title'),
   authForm: document.getElementById('auth-form'),
   emailInput: document.getElementById('email-input'),
   passwordInput: document.getElementById('password-input'),
@@ -57,7 +58,7 @@ export const domElements = {
 };
 
 
-export function swithView(targetViewId) {
+export function switchView(targetViewId) {
     const allViews = [
         domElements.homeDiv, domElements.authDiv, domElements.dashboardDiv,
         domElements.withdrawDiv, domElements.depositDiv, domElements.manageAccountDiv,
@@ -72,4 +73,20 @@ export function swithView(targetViewId) {
             view.id.classList.add('hidden');
         }
     })
+}
+
+
+export function handleAuthDisplay(isSignUpMode) {
+    if (isSignUpMode) {
+        domElements.authTitle.textContent = 'Create Account';
+        domElements.authBtn.textContent = 'Sign Up';
+        domElements.authAccountText.textContent = 'Already have an account? ';
+        domElements.authInsteadText.textContent = 'Log In';
+    }
+    else {
+        domElements.authTitle.textContent = 'Log into your account';
+        domElements.authBtn.textContent = 'Log In';
+        domElements.authAccountText.textContent = 'Dont have an account? ';
+        domElements.authInsteadText.textContent = 'Sign Up';
+    }
 }

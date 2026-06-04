@@ -106,3 +106,14 @@ export function renderBalance(entries) {
 
     domElements.currentBalanceDisplay.textContent = `Current Balance: ${balance.toFixed(2)}`;
 }
+
+
+export function clearTransactionInputs() {
+    domElements.withdrawInput.value = '';
+    domElements.depositInput.value = '';
+}
+
+export function clearAccountInputs() {
+    domElements.newEmailInput.value = '';
+    domElements.newPasswordInput.value = '';
+}

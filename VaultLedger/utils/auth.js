@@ -2,6 +2,7 @@
 
 import {supabaseClient} from './supabase.js';
 
+
 export async function signUpUser(email, password) {
     if (!String(email).includes('@gmail.com')) {
         throw new Error('Email must contain `@gmail.com` at the end!');
@@ -47,4 +48,12 @@ export async function updateUserPassword(newPassword) {
     if (error) throw error;
 
     return data;
+}
+
+
+// passes session updates back to main.js automatically
+export async function hanldeAuthChanges(callback) {
+    supabaseClient.auth.onAuthStateChange((event, session) => {
+        callback(session);
+    });
 }

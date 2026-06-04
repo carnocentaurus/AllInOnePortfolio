@@ -90,3 +90,19 @@ export function handleAuthDisplay(isSignUpMode) {
         domElements.authInsteadText.textContent = 'Sign Up';
     }
 }
+
+
+export function renderBalance(entries) {
+    let balance = 0;
+
+    entries.forEach(entry => {
+        if (entry.transaction_type === 'DEPOSIT') {
+            balance += Number(entry.amount);
+        }
+        else if (entry.transaction_type === 'WITHDRAW') {
+            balance -= Number(entry.amount);
+        }
+    });
+
+    domElements.currentBalanceDisplay.textContent = `Current Balance: ${balance.toFixed(2)}`;
+}

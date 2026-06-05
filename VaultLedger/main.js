@@ -53,3 +53,28 @@ async function syncLedgerDisplay() {
         alert(`Failed to load balance: ${error.message}`);
     }
 }
+
+
+// user authentication
+domElements.authForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const email = domElements.emailInput.value;
+    const password = domElements.passwordInput.value;
+
+    try {
+        if (isSignUpMode) {
+            await signUpUser(email, password);
+            alert('Account created successfully! Welcome aboard!');
+            isSignUpMode = false;
+            handleAuthDisplay(isSignUpMode);
+        }
+        else {
+            await logInUser(email, password);
+            alert('Log in authenticated!');
+        }
+    }
+    catch (error) {
+        alert(`Security Authentication Failed: ${error.message}`);
+    }
+});

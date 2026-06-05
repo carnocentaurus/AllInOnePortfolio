@@ -6,7 +6,6 @@ import {supabaseClient} from './supabase.js';
 export async function signUpUser(email, password) {
     if (!String(email).includes('@gmail.com')) {
         throw new Error('Email must contain `@gmail.com` at the end!');
-        return;
     }
 
     const {data, error} = await supabaseClient.auth.signUp({email, password});
@@ -33,7 +32,6 @@ export async function logOutUser() {
 export async function updateUserEmail(newEmail) {
     if (!String(newEmail).includes('@gmail.com')) {
         throw new Error('Email must contain `@gmail.com` at the end!');
-        return;
     }
 
     const {data, error} = await supabaseClient.auth.updateUser({email: newEmail});

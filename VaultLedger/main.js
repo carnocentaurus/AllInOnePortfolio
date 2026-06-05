@@ -41,3 +41,15 @@ handleAuthChanges(async (session) => {
         switchView('home-div');
     }
 });
+
+
+// fetch data and refresh balance display
+async function syncLedgerDisplay() {
+    try {
+        const data = await fetchLedgerEntries();
+        renderBalance(data);
+    }
+    catch (error) {
+        alert(`Failed to load balance: ${error.message}`);
+    }
+}

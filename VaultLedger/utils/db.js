@@ -15,10 +15,12 @@ export async function fetchLedgerEntries() {
 }
 
 
-export async function insertDeposit(amount) {
+export async function handleDeposit(amount) {
     const numericAmount = parseFloat(amount);
 
-    if (isNaN(numericAmount) || numericAmount < 1) throw new Error('Please enter valid amount!');
+    if (isNaN(numericAmount) || numericAmount < 1) {
+        throw new Error('Please enter valid amount greater than 0!');
+    }
 
     const {data, error} = await supabaseClient
         .from('ledger')
@@ -26,6 +28,28 @@ export async function insertDeposit(amount) {
             {
                 amount: numericAmount,
                 transaction_type: 'DEPOSIT'
+            }
+        ]);
+
+    if (error) throw error;
+
+    return data;
+}
+
+
+export async function handleWithdraw(amount) {
+    const numericAmount = parseFloat(amount);
+
+    if (isNaN(numericAmount) || numericAmount < 1) {
+        throw new Error('Please enter valid amount greater than 0!');
+    }
+
+    const {data, error} = await supabaseClient
+        .from('ledger')
+        .insert([
+            {
+                amount: numericAmount,
+                transaction_type: 'WITHDRAW'
             }
         ]);
 

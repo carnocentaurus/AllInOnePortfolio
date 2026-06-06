@@ -193,3 +193,14 @@ domElements.changePasswordCancelBtn.onclick = () => {
     clearAccountInputs();
     switchView('manage-account-div');
 }
+
+
+domElements.logOutBtn.onclick = async () => {
+    try {
+        await logOutUser();
+        alert('Logged out successfully!');
+    }
+    catch (error) {
+        alert(`Log out error: ${error.message}`);
+    }
+}

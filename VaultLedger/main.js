@@ -56,7 +56,7 @@ async function syncLedgerDisplay() {
 
 
 // user authentication
-domElements.authForm.addEventListener('submit', async (event) => {
+domElements.authForm.onsubmit = async (event) => {
     event.preventDefault();
 
     const email = domElements.emailInput.value;
@@ -77,13 +77,47 @@ domElements.authForm.addEventListener('submit', async (event) => {
     catch (error) {
         alert(`Security Authentication Failed: ${error.message}`);
     }
-});
+}
 
 
 // toggle between login and sign up text modifications
-domElements.authAccountText.addEventListener('click', (event) => {
+domElements.authAccountText.onclick = (event) => {
     if (event.target.id === 'auth-instead-text') {
         isSignUpMode = !isSignUpMode;
         handleAuthDisplay(isSignUpMode);
     }
-});
+}
+
+
+// ledger transaction (deposit)
+domElements.depositConfirmBtn.onclick = async () => {
+    const amount = domElements.depositInput.value;
+
+    try {
+        await handleDeposit(amount);
+        alert('Balance successfully added to ledger!');
+        clearTransactionInputs();
+        switchView('dashboard-div');
+        await syncLedgerDisplay();
+    }
+    catch (error) {
+        alert(`Transaction failed: ${error.message}`);
+    }
+}
+
+
+// ledger transaction (withdraw)
+domElements.withdrawConfirmBtn.onclick = async () => {
+    const amount = domElements.withdrawInput.value;
+
+    try {
+        await handleWithdraw(amount);
+        alert('Balance successfully deducted from ledger!');
+        clearTransactionInputs();
+        switchView('dashboard-div');
+        await syncLedgerDisplay();
+    }
+    catch (error) {
+        alert(`Transaction failed: ${error.message}`);
+    }
+}

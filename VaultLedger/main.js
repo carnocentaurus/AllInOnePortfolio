@@ -157,3 +157,17 @@ domElements.changePasswordForm.onsubmit = async (event) => {
         alert(`Password update failed: ${error.message}`);
     }
 }
+
+
+domElements.startBtn.onclick = () => {
+    isSignUpMode = false;
+    handleAuthDisplay(isSignUpMode);
+    switchView('auth-div');
+}
+
+domElements.authBackBtn.onclick = () => switchView('home-div');
+domElements.dashboardBackBtn.onclick = () => switchView('home-div');
+
+domElements.depositBtn.onclick = () => switchView('deposit-div');
+domElements.withdrawBtn.onclick = () => switchView('withdraw-div');
+domElements.manageAccountBtn.onclick = () => switchView('manage-account-div');

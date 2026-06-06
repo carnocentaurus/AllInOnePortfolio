@@ -20,6 +20,7 @@ export const domElements = {
   dashboardDiv: document.getElementById('dashboard-div'),
   currentBalanceDisplay: document.getElementById('current-balance-display'),
   withdrawBtn: document.getElementById('withdraw-btn'),
+  depositBtn: document.getElementById('deposit-btn'),
   manageAccountBtn: document.getElementById('manage-account-div'),
   logOutBtn: document.getElementById('log-out-btn'),
   dashboardBackBtn: document.getElementById('dashboard-back-btn'),

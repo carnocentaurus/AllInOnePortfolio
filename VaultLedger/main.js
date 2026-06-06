@@ -168,6 +168,28 @@ domElements.startBtn.onclick = () => {
 domElements.authBackBtn.onclick = () => switchView('home-div');
 domElements.dashboardBackBtn.onclick = () => switchView('home-div');
 
-domElements.depositBtn.onclick = () => switchView('deposit-div');
 domElements.withdrawBtn.onclick = () => switchView('withdraw-div');
+domElements.depositBtn.onclick = () => switchView('deposit-div');
 domElements.manageAccountBtn.onclick = () => switchView('manage-account-div');
+
+domElements.withdrawCancelBtn.onclick = () => {
+    clearTransactionInputs();
+    switchView('dashboard-div');
+}
+
+domElements.depositCancelBtn.onclick = () => {
+    clearTransactionInputs();
+    switchView('dashboard-div');
+}
+
+domElements.manageAccountBackBtn.onclick = () => switchView('dashboard-div');
+
+domElements.changeEmailCancelBtn.onclick = () => {
+    clearAccountInputs();
+    switchView('manage-account-div');
+}
+
+domElements.changePasswordCancelBtn.onclick = () => {
+    clearAccountInputs();
+    switchView('manage-account-div');
+}

@@ -78,3 +78,12 @@ domElements.authForm.addEventListener('submit', async (event) => {
         alert(`Security Authentication Failed: ${error.message}`);
     }
 });
+
+
+// toggle between login and sign up text modifications
+domElements.authAccountText.addEventListener('click', (event) => {
+    if (event.target.id === 'auth-instead-text') {
+        isSignUpMode = !isSignUpMode;
+        handleAuthDisplay(isSignUpMode);
+    }
+});

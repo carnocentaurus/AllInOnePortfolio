@@ -121,3 +121,39 @@ domElements.withdrawConfirmBtn.onclick = async () => {
         alert(`Transaction failed: ${error.message}`);
     }
 }
+
+
+// change email
+domElements.changeEmailForm.onsubmit = async (event) => {
+    event.preventDefault();
+
+    const newEmail = domElements.newEmailInput.value;
+
+    try {
+        await updateUserEmail(newEmail);
+        alert('Email update request received. Check your email to finalize changes');
+        clearAccountInputs();
+        switchView('manage-account-div');
+    }
+    catch (error) {
+        alert(`Email update failed: ${error.message}`);
+    }
+}
+
+
+// change password
+domElements.changePasswordForm.onsubmit = async (event) => {
+    event.preventDefault();
+
+    const newPassword = domElements.newPasswordInput.value;
+
+    try {
+        await updateUserPassword(newPassword);
+        alert('Password updated successfully!');
+        clearAccountInputs();
+        switchView('manage-account-div');
+    }
+    catch (error) {
+        alert(`Password update failed: ${error.message}`);
+    }
+}

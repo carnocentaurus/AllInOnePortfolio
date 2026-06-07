@@ -82,13 +82,13 @@ export function handleAuthDisplay(isSignUpMode) {
     if (isSignUpMode) {
         domElements.authTitle.textContent = 'Create Account';
         domElements.authBtn.textContent = 'Sign Up';
-        domElements.authAccountText.textContent = 'Already have an account? ';
+        domElements.authAccountText.childNodes[0].textContent = 'Already have an account? ';
         domElements.authInsteadText.textContent = 'Log In';
     }
     else {
         domElements.authTitle.textContent = 'Log into your account';
         domElements.authBtn.textContent = 'Log In';
-        domElements.authAccountText.textContent = 'Dont have an account? ';
+        domElements.authAccountText.childNodes[0].textContent = 'Dont have an account? ';
         domElements.authInsteadText.textContent = 'Sign Up';
     }
 }

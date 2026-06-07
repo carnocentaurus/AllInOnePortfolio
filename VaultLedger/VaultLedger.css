@@ -72,3 +72,7 @@ main div .big-text {
     font-family: 'righteous';
     font-size: 3rem;
 }
+
+main #auth-div #auth-instead-text {
+    color: blue;
+}

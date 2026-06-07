@@ -44,6 +44,32 @@ export async function handleWithdraw(amount) {
         throw new Error('Please enter valid amount greater than 0!');
     }
 
+    // fetch all existing entries to calculate the current balance
+    const {data: entries, error: fetchError} = await supabaseClient
+        .from('ledger')
+        .select('amount', 'transaction_type')
+
+    if (fetchError) throw fetchError;
+
+    let currentBalance = 0;
+
+    // computes the active balance in memory
+    if (entries) {
+        entries.forEach(entry => {
+            // only reads deposit history
+            if (entry.transaction_type === 'DEPOSIT') {
+                currentBalance += Number(entry.amount);
+            }
+            else if (entry.transaction_type === 'WITHDRAW') {
+                currentBalance -= Number(entry.amount);
+            }
+        });
+    }
+
+    if (numericAmount > currentBalance) {
+        throw new Error(`Withdrawal denied: You dont have enough balance! Current balance is ${currentBalance.toFixed(2)}`);
+    }
+
     const {data, error} = await supabaseClient
         .from('ledger')
         .insert([

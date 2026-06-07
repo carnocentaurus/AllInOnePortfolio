@@ -21,14 +21,14 @@ export const domElements = {
   currentBalanceDisplay: document.getElementById('current-balance-display'),
   withdrawBtn: document.getElementById('withdraw-btn'),
   depositBtn: document.getElementById('deposit-btn'),
-  manageAccountBtn: document.getElementById('manage-account-div'),
+  manageAccountBtn: document.getElementById('manage-account-btn'),
   logOutBtn: document.getElementById('log-out-btn'),
   dashboardBackBtn: document.getElementById('dashboard-back-btn'),
 
   // withdraw
   withdrawDiv: document.getElementById('withdraw-div'),
   withdrawInput: document.getElementById('withdraw-input'),
-  withdrawConfirmBtn: document.getElementById('withdraw-confirm-div'),
+  withdrawConfirmBtn: document.getElementById('withdraw-confirm-btn'),
   withdrawCancelBtn: document.getElementById('withdraw-cancel-btn'),
 
   // deposit
@@ -38,7 +38,7 @@ export const domElements = {
   depositCancelBtn: document.getElementById('deposit-cancel-btn'),
 
   // manage account
-  manageAccountDiv: document.getElementById('manage-accout-div'),
+  manageAccountDiv: document.getElementById('manage-account-div'),
   changeEmailBtn: document.getElementById('change-email-btn'),
   changePasswordBtn: document.getElementById('change-password-btn'),
   manageAccountBackBtn: document.getElementById('manage-account-back-btn'),
@@ -67,11 +67,12 @@ export function switchView(targetViewId) {
     ];
 
     allViews.forEach(view => {
+        if (!view) return;
         if (view.id === targetViewId) {
-            view.id.classList.remove('hidden');
+            view.classList.remove('hidden');
         }
         else {
-            view.id.classList.add('hidden');
+            view.classList.add('hidden');
         }
     })
 }

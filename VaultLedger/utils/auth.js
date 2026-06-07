@@ -50,7 +50,7 @@ export async function updateUserPassword(newPassword) {
 
 
 // passes session updates back to main.js automatically
-export async function hanldeAuthChanges(callback) {
+export async function handleAuthChanges(callback) {
     supabaseClient.auth.onAuthStateChange((event, session) => {
         callback(session);
     });

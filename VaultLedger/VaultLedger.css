@@ -40,6 +40,22 @@ button:hover {
     opacity: 80%;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    text-align: center;
+}
+
+input {
+    border: 1px solid #333;
+    height: 2.2rem;
+    padding-left: 0.5rem;
+    overflow-x: scroll;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
 main .hidden {
     display: none !important;
 }
@@ -49,6 +65,7 @@ main div {
     flex-direction: column;
     row-gap: 1.5rem;
     text-align: center;
+    width: 100%;
 }
 
 main div .big-text {

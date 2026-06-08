@@ -76,3 +76,26 @@ main div .big-text {
 main #auth-div #auth-instead-text {
     color: blue;
 }
+
+@media (min-width: 768px) {
+    * {
+        font-size: 1.3rem;
+    }
+
+    body {
+        margin: 3.5rem;
+    }
+
+    .big-text {
+        font-size: 4rem;
+    }
+
+    form {
+        row-gap: 0.5rem;
+    }
+
+    input {
+        padding-left: 0.7rem;
+        height: 2.5rem;
+    }
+}

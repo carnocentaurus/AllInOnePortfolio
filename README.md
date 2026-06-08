@@ -1,5 +1,5 @@
-# Multi-Project Web Portfolio
-A collection of **22 vanilla JavaScript mini-projects**, tools, games, and simulations — all bundled into a single interactive portfolio website.  
+﻿# Multi-Project Web Portfolio
+A collection of **23 vanilla JavaScript mini-projects**, tools, games, and simulations — all bundled into a single interactive portfolio website.  
 This repository showcases my journey in front-end development through practical, self-contained apps built with **HTML, CSS, and JavaScript (ES6)**.
 
 [Live Demo](https://all-in-one-portfolio-three.vercel.app/)
@@ -46,6 +46,7 @@ No build tools or dependencies required.
 | Random Joke Generator | On-demand comedy | JokeAPI |
 | Image Viewer | Lightweight image gallery with preview | Picsum |
 | Gatekeeper Portal | Secure authentication skeleton | Supabase Auth |
+| Vault Ledger | Secure token management and real-time ledger | Supabase (Auth/DB) |
 
 ### Calculators & Utilities
 | Project | Description |
@@ -108,14 +109,15 @@ portfolio4/
 ├── SlotMachine/
 ├── SoulElementQuiz/
 ├── TaskManager/
+├── VaultLedger/
 ├── VirtualBank/
 ├── VirtualShop/
 └── WeatherSystem/
 ```
-Each project folder contains its own `index.html`, `ProjectName.css`, and `ProjectName.js`.
+Each project folder contains its own `index.html`, `ProjectName.css`, and `ProjectName.js`.       
 
 ## Key Features
-- 20+ fully functional projects
+- 23+ fully functional projects
 - Pure vanilla JavaScript throughout
 - Responsive design for all devices
 - Real-world API integration examples

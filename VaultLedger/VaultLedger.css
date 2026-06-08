@@ -83,7 +83,7 @@ main #auth-div #auth-instead-text {
     }
 
     body {
-        margin: 3.5rem;
+        margin: 0 3.5rem;
     }
 
     .big-text {
@@ -97,5 +97,32 @@ main #auth-div #auth-instead-text {
     input {
         padding-left: 0.7rem;
         height: 2.5rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    * {
+        font-size: 1rem;
+    }
+
+    body {
+        margin: 0 30rem;
+    }
+
+    button {
+        padding: 0.3rem 0;
+    }
+
+    .big-text {
+        font-size: 6rem;
+    }
+
+    form {
+        row-gap: 0.3rem;
+    }
+
+    input {
+        padding-left: 0.5rem;
+        height: 2rem;
     }
 }

@@ -172,6 +172,9 @@ domElements.withdrawBtn.onclick = () => switchView('withdraw-div');
 domElements.depositBtn.onclick = () => switchView('deposit-div');
 domElements.manageAccountBtn.onclick = () => switchView('manage-account-div');
 
+domElements.changeEmailBtn.onclick = () => switchView('change-email-div');
+domElements.changePasswordBtn.onclick = () => switchView('change-password-div');
+
 domElements.withdrawCancelBtn.onclick = () => {
     clearTransactionInputs();
     switchView('dashboard-div');
